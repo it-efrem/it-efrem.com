@@ -4,6 +4,7 @@ import Head from 'next/head';
 
 import Header from "../components/Smart/Header";
 import Footer from "../components/Smart/Footer";
+import PageContent from "../components/Smart/PageContent";
 
 export default class MyApp extends App {
     render() {
@@ -19,7 +20,9 @@ export default class MyApp extends App {
                     {/*<link rel="shortcut icon" href=".png" type="image/png"/>*/}
                 </Head>
                 <Header/>
-                <Component {...pageProps} />
+                <PageContent>
+                    <Component {...pageProps} />
+                </PageContent>
                 <Footer/>
             </>
         )
