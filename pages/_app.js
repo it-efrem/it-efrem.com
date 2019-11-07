@@ -8,6 +8,7 @@ import Header from "../components/Smart/Header";
 import Footer from "../components/Smart/Footer";
 import PageContent from "../components/Smart/PageContent";
 
+//ToDo: Replace fontawesome to files
 export default class MyApp extends App {
     render() {
         const {Component, pageProps} = this.props;
@@ -20,6 +21,7 @@ export default class MyApp extends App {
                     {/*<link rel="shortcut icon" href=".png"/>*/}
                     {/*<link rel="icon" href=".png"/>*/}
                     {/*<link rel="shortcut icon" href=".png" type="image/png"/>*/}
+                    <script src="https://kit.fontawesome.com/321ff4e708.js" crossOrigin="anonymous"></script>
                 </Head>
                 <Header/>
                 <PageContent>
