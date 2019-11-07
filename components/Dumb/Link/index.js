@@ -1,4 +1,4 @@
-export function Link({path, link, label}) {
+export function Link({path, link, icon, label}) {
     const aParametrs = {
         href: null,
         target: null
@@ -14,5 +14,10 @@ export function Link({path, link, label}) {
         aParametrs.target = '_blank';
     }
 
-    return <a {...aParametrs}>{label}</a>;
+    return <a {...aParametrs}>
+        {
+            icon ? <i className={icon}/> : null
+        }
+        {label}
+    </a>;
 }

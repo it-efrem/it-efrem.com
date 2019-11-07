@@ -1,4 +1,5 @@
 import {Link} from '../../Dumb/Link/index'
+import './style.scss'
 
 export default function Header() {
     return (
@@ -23,31 +24,38 @@ function mapMenu(item) {
 //ToDo: Move from here
 const menuItems = [
     {
-        label: 'My Medium',
+        icon: 'fab fa-medium',
+        label: 'Medium',
         path: '/articles?tags=medium'
     },
     {
-        label: 'My NPM',
+        icon: 'fab fa-npm',
+        label: 'NPM',
         path: '/articles?tags=npm'
     },
     {
-        label: 'My Habr',
+        icon: 'fas fa-hospital-symbol',
+        label: 'Habr',
         path: '/articles?tags=habr'
     },
     {
-        label: 'My Stack Overflow',
+        icon: 'fab fa-stack-overflow',
+        label: 'StackOverflow',
         link: 'https://stackoverflow.com/users/8963706/it-efrem'
     },
     {
-        label: 'My GitHub',
+        icon: 'fab fa-github-alt',
+        label: 'GitHub',
         link: 'https://github.com/Evgeny-Bukovski'
     },
     {
-        label: 'My Certifications',
+        icon: 'fas fa-graduation-cap',
+        label: 'Certifications',
         path: '/certifications'
     },
     {
-        label: 'My Experience',
+        icon: 'fas fa-vial',
+        label: 'Experience',
         path: '/experience'
     },
 ];

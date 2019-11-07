@@ -1,0 +1,37 @@
+header {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  nav {
+    max-width: max-content;
+    background: #f7f3f1;
+    box-shadow: 5px 7px 0px 0 rgba(221, 218, 216, 0.7);
+
+    ul {
+      display: flex;
+      justify-content: center;
+
+      li {
+        margin: 0.7em 1em;
+        font-weight: bold;
+      }
+    }
+  }
+
+  a {
+    color: black;
+    padding-bottom: 0.1em;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-color: black;
+    }
+
+    .fa, .fab, .fad, .fal, .far, .fas {
+      font-size: 0.9em;
+      margin-right: 0.3em;
+    }
+  }
+}
