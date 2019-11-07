@@ -6,6 +6,7 @@ export default function Header() {
         <header>
             <nav>
                 <ul>
+                    <li>My:</li>
                     {menuItems.map(mapMenu)}
                 </ul>
             </nav>
@@ -29,9 +30,19 @@ const menuItems = [
         path: '/articles?tags=medium'
     },
     {
+        icon: 'fab fa-stack-overflow',
+        label: 'StackOverflow',
+        link: 'https://stackoverflow.com/users/8963706/it-efrem'
+    },
+    {
         icon: 'fab fa-npm',
         label: 'NPM',
         path: '/articles?tags=npm'
+    },
+    {
+        icon: 'fas fa-graduation-cap',
+        label: 'Certifications',
+        path: '/certifications'
     },
     {
         icon: 'fas fa-hospital-symbol',
@@ -39,19 +50,9 @@ const menuItems = [
         path: '/articles?tags=habr'
     },
     {
-        icon: 'fab fa-stack-overflow',
-        label: 'StackOverflow',
-        link: 'https://stackoverflow.com/users/8963706/it-efrem'
-    },
-    {
         icon: 'fab fa-github-alt',
         label: 'GitHub',
         link: 'https://github.com/Evgeny-Bukovski'
-    },
-    {
-        icon: 'fas fa-graduation-cap',
-        label: 'Certifications',
-        path: '/certifications'
     },
     {
         icon: 'fas fa-vial',
