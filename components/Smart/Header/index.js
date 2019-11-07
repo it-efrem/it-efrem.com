@@ -2,11 +2,13 @@ import {Link} from '../../Dumb/Link/index'
 
 export default function Header() {
     return (
-        <section>
-            <ul>
-                {menuItems.map(mapMenu)}
-            </ul>
-        </section>
+        <header>
+            <nav>
+                <ul>
+                    {menuItems.map(mapMenu)}
+                </ul>
+            </nav>
+        </header>
     )
 }
 

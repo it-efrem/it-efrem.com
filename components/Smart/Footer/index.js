@@ -1,7 +1,44 @@
+import moment from 'moment'
+import './style.scss'
+
 export default function Footer() {
+
+    //ToDo: show email
     return (
-        <section>
-            stub footer content
-        </section>
+        <footer>
+            <div className='location'>
+                <span className='location_label'>Location:</span>
+                <ul>
+                    <li>
+                        <i className="fas fa-globe-americas"/>
+                        <span>Earth (third planet)</span>
+                    </li>
+                    <li>
+                        <i className="far fa-sun"/>
+                        <span>Solar System</span>
+                    </li>
+                    <li>
+                        <i className="fab fa-empire"/>
+                        <span>Orion Arm</span>
+                    </li>
+                    <li>
+                        <i className="fab fa-galactic-republic"/>
+                        <span>Milky Way</span>
+                    </li>
+                    <li>
+                        <i className="fab fa-galactic-senate"/>
+                        <span>Virgo Supercluster</span>
+                    </li>
+                    <li>
+                        <i className="fas fa-infinity"/>
+                        <span>Universe</span>
+                    </li>
+                </ul>
+            </div>
+            <div className='location_copy'>
+                <div>My Email: (click here to show)</div>
+                <div>Dev by Eugene &copy; 2014 - {moment(Date.now()).format('YYYY')}</div>
+            </div>
+        </footer>
     )
 }

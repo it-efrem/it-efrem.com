@@ -1,0 +1,23 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+
+  .location {
+    &_label {
+      font-weight: bold;
+    }
+
+    ul {
+      font-size: 0.9rem;
+    }
+
+    &_copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import App from 'next/app'
 import React from 'react'
 import Head from 'next/head';
+import './reset.scss'
+import './style.scss'
 
 import Header from "../components/Smart/Header";
 import Footer from "../components/Smart/Footer";
