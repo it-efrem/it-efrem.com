@@ -4,11 +4,11 @@ export default function IndexPage() {
     return (
         <>
             <Head>
-                <title>Eugene Efremov - about me | it-efrem.com</title>
+                <title>Eugene Efremov - My Experience | it-efrem.com</title>
             </Head>
-            <section>
-                stub content
-            </section>
+            <div>
+                Experience
+            </div>
         </>
     )
 }

@@ -14,6 +14,14 @@ footer {
 
     ul {
       font-size: 0.9rem;
+
+      li {
+        padding: 0.2rem;
+
+        i {
+          padding-right: 0.2rem;
+        }
+      }
     }
 
     &_copy {

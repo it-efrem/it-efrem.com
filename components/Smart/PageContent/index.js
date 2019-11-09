@@ -1,6 +1,8 @@
+import './style.scss';
+
 export default function PageContent({children}) {
     return (
-        <section>
+        <section className='PageContent'>
             <article>
             {children}
             </article>

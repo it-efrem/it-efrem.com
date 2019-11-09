@@ -25,29 +25,9 @@ function mapMenu(item) {
 //ToDo: Move from here
 const menuItems = [
     {
-        icon: 'fab fa-medium',
-        label: 'Medium',
-        path: '/articles?tags=medium'
-    },
-    {
-        icon: 'fab fa-stack-overflow',
-        label: 'StackOverflow',
-        link: 'https://stackoverflow.com/users/8963706/it-efrem'
-    },
-    {
-        icon: 'fab fa-npm',
-        label: 'NPM',
-        path: '/articles?tags=npm'
-    },
-    {
-        icon: 'fas fa-graduation-cap',
-        label: 'Certifications',
-        path: '/certifications'
-    },
-    {
-        icon: 'fas fa-hospital-symbol',
-        label: 'Habr',
-        path: '/articles?tags=habr'
+        icon: 'fas fa-vial',
+        label: 'Experience',
+        path: '/'
     },
     {
         icon: 'fab fa-github-alt',
@@ -55,8 +35,28 @@ const menuItems = [
         link: 'https://github.com/Evgeny-Bukovski'
     },
     {
-        icon: 'fas fa-vial',
-        label: 'Experience',
-        path: '/experience'
+        icon: 'fab fa-medium',
+        label: 'Medium',
+        path: '/articles?tags=medium'
+    },
+    {
+        icon: 'fab fa-npm',
+        label: 'NPM',
+        path: '/articles?tags=npm'
+    },
+    {
+        icon: 'fab fa-stack-overflow',
+        label: 'StackOverflow',
+        link: 'https://stackoverflow.com/users/8963706/it-efrem'
+    },
+    {
+        icon: 'fas fa-hospital-symbol',
+        label: 'Habr',
+        path: '/articles?tags=habr'
+    },
+    {
+        icon: 'fas fa-graduation-cap',
+        label: 'Certifications',
+        path: '/certifications'
     },
 ];
