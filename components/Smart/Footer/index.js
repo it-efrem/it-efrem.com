@@ -1,9 +1,11 @@
+import React, {useState} from 'react';
 import moment from 'moment'
 import './style.scss'
+import {contacts} from "../../../helpers/contacts";
 
 export default function Footer() {
+    const [contactsIsVisible, setContactsIsVisible] = useState(false);
 
-    //ToDo: show email
     return (
         <footer>
             <div className='location'>
@@ -40,7 +42,19 @@ export default function Footer() {
                 </ul>
             </div>
             <div className='location_copy'>
-                <div>My Email: (click here to show)</div>
+                <div>
+                    <span>My Email&nbsp;</span>
+                    {
+                        !contactsIsVisible ?
+                            <span className='link' onClick={() => setContactsIsVisible(true)}>
+                                (click here to show)
+                            </span>
+                            :
+                            <span>
+                                <i className="far fa-envelope"/> {contacts.getEmail}
+                            </span>
+                    }
+                </div>
                 <div>
                     <span>See this site in </span>
                     <a href='https://github.com/Evgeny-Bukovski/it-efrem.com' target="_blank">GitHub repository</a>

@@ -1,9 +1,12 @@
+import React, {useState} from 'react';
 import Head from 'next/head';
 import moment from 'moment'
 import './style.scss'
 import {getLastCommit} from "../../hooks/api/github/getLastCommit";
+import {contacts} from "../../helpers/contacts";
 
 export default function IndexPage() {
+    const [contactsIsVisible, setContactsIsVisible] = useState(false);
     const lastCommit = getLastCommit();
 
     return (
@@ -37,14 +40,18 @@ export default function IndexPage() {
                         <div className='basic_info-block'>
                             <div>My contacts</div>
                             <div className='contacts'>
-                                <div>
-                                    Phone:
-                                    <br/>
-                                    Email:
-                                </div>
-                                <div>
-                                    (click here to show)
-                                </div>
+                                {
+                                    !contactsIsVisible ?
+                                        <span className='link' onClick={() => setContactsIsVisible(true)}>
+                                                (click here to show)
+                                            </span>
+                                        :
+                                        <div>
+                                            <i className="fas fa-mobile-alt"/> {contacts.getPhone}
+                                            <br/>
+                                            <i className="far fa-envelope"/> {contacts.getEmail}
+                                        </div>
+                                }
                             </div>
                         </div>
                     </div>
