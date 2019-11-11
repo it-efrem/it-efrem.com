@@ -1,5 +1,8 @@
 .PageContent {
+  display: flex;
+  justify-content: center;
+
   article {
-    padding-top: 4rem;
+    padding-top: 6rem;
   }
 }

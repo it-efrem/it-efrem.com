@@ -1,0 +1,77 @@
+.IndexPage {
+  width: 47em;
+  max-width: 47em;
+
+  .specialty {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+
+  .main {
+    display: flex;
+    margin-bottom: 2em;
+
+    .photo {
+      background: url("/static/img/i.jpg");
+      background-position: inherit;
+      background-size: cover;
+      width: 18em;
+      height: 18em;
+      min-width: 18em;
+      min-height: 18em;
+      border-radius: 0.5em;
+      box-shadow: 3px 3px 0px 0px #e7e5e4;
+    }
+
+    .basic_info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 2em;
+
+      &-block {
+        > * {
+          &:first-child {
+            color: #dac0b3;
+            font-size: 0.8em;
+          }
+
+          &:not(:first-child) {
+            margin: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .full_name {
+      font-size: 3em;
+      margin-bottom: -0.15em;
+    }
+
+    .passport {
+      font-size: 0.65em;
+      text-align: right;
+      color: #7d7d7d;
+    }
+
+    .work_experience {
+      font-size: 1.3em;
+      margin-bottom: 1em;
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 2.4em;
+      min-height: 2.4em;
+
+      > div {
+        min-width: 4em;
+        line-height: 1.2em;
+      }
+    }
+  }
+}

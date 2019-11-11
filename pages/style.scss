@@ -3,3 +3,14 @@ body {
   position: relative;
   font-family: 'Roboto', sans-serif;
 }
+
+.link {
+  color: black;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-color: black;
+    cursor: pointer;
+  }
+}
