@@ -59,4 +59,9 @@ const menuItems = [
         label: 'Certifications',
         path: '/certifications'
     },
+    {
+        icon: 'fas fa-heart',
+        label: 'Useful',
+        path: '/useful_for_developers'
+    },
 ];

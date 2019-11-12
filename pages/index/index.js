@@ -4,6 +4,9 @@ import moment from 'moment'
 import './style.scss'
 import {getLastCommit} from "../../hooks/api/github/getLastCommit";
 import {contacts} from "../../helpers/contacts";
+import {differenceBetweenDates} from "../../helpers/duration";
+import {AboutMe} from "../../components/Dumb/Experience/AboutMe";
+import {experience, skills} from './data';
 
 export default function IndexPage() {
     const [contactsIsVisible, setContactsIsVisible] = useState(false);
@@ -56,21 +59,75 @@ export default function IndexPage() {
                         </div>
                     </div>
                 </div>
-                <div>
-                    {/*//ToDo: SEO*/}
+                <div className='IndexPage_block'>
                     <div className=''>Updated: {lastCommit} (Auto)</div>
-                    Experience
+                    <div className='IndexPage_block-label'>Experience</div>
+                    <div>
+                        <ul>
+                            {experience.map(mapExperience)}
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    Skills
+                <div className='IndexPage_block'>
+                    <div className='IndexPage_block-label'>Skills</div>
+                    <div>
+                        <ul>
+                            {skills.map(mapSkills)}
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    About me
-                </div>
-                <div>
-
+                <div className='IndexPage_block'>
+                    <div className='IndexPage_block-label'>About me</div>
+                    <AboutMe/>
                 </div>
             </div>
         </>
+    )
+}
+
+function mapSkills(item, idx) {
+    return <li key={idx}>{item}</li>
+}
+
+function mapExperience(item, idx) {
+    const workDuration = () => {
+        let _result = [];
+        const _duration = differenceBetweenDates(
+            moment(item.date_to),
+            moment(item.date_from)
+        );
+
+        if (_duration.years) {
+            _result.push(`${_duration.years} years`);
+        }
+        if (_duration.months) {
+            _result.push(`${_duration.months} months`);
+        }
+
+        if (_result.length) {
+            return _result.join(' ');
+        } else {
+            return null
+        }
+    };
+
+    return (
+        <li key={idx}>
+            <div>
+                <div>
+                    {moment(item.date_from).format('MMM YYYY')}
+                    <span>&nbsp;-&nbsp;</span>
+                    {moment(item.date_to).format('MMM YYYY')}
+                </div>
+                <div>
+                    <span>{workDuration()}</span>
+                </div>
+            </div>
+            <div>
+                <div>{item.company.name}</div>
+                <div>{item.company.site}</div>
+                <div dangerouslySetInnerHTML={{__html: item.description}}/>
+            </div>
+        </li>
     )
 }
