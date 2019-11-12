@@ -84,4 +84,17 @@
       margin: 0.4em 0;
     }
   }
+
+  .skills {
+    ul {
+      li {
+        display: inline-flex;
+        margin: 0.25em;
+        padding: 0.6em 0.8em;
+        background: #eff1f2;
+        color: #666666;
+        border-radius: 0.2em;
+      }
+    }
+  }
 }

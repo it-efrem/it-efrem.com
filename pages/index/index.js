@@ -70,7 +70,7 @@ export default function IndexPage() {
                 </div>
                 <div className='IndexPage_block'>
                     <div className='IndexPage_block-label'>Skills</div>
-                    <div>
+                    <div className='skills'>
                         <ul>
                             {skills.map(mapSkills)}
                         </ul>
