@@ -1,5 +1,41 @@
+import React from 'react';
+import {List} from "./index";
+
+const iHaveDone = [
+    'For 1.5 years I spent >200 lessons on Skype',
+    'I recorded about 80\'s of his own video lectures -> https://www.youtube.com/c/code_robots',
+    'They have been watched >550,000 times',
+];
+const tasks = [
+    'Programming in JS, Java and C ++',
+    'Fundamentals of Higher Mathematics',
+    'Data structures',
+    'Algorithms',
+];
+const aboutProject = [
+    'I was developing the educational portal Code & Robots, whose goal was to bring together in one place newcomers and IT professionals'
+];
+
 export function Teacher() {
     return (
-        <div></div>
+        <div>
+            <p>
+                <hr/>
+                <div className='label'>I have done this:</div>
+            </p>
+            <List data={iHaveDone}/>
+
+            <p>
+                <hr/>
+                <div className='label'>My task -> To help everyone in the development of topics:</div>
+            </p>
+            <List data={tasks}/>
+
+            <p>
+                <hr/>
+                <div className='label'>About the project:</div>
+            </p>
+            <List data={aboutProject}/>
+        </div>
     )
 }
