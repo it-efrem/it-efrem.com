@@ -104,6 +104,15 @@
   }
 
   .experience {
+    a {
+      color: #2196F3;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-bottom: 1px solid #2196F3;
+      }
+    }
+
     &_item {
       margin: 2em 0;
       display: flex;
@@ -135,15 +144,6 @@
           }
           &:last-child {
             font-size: 0.9em;
-          }
-
-          a {
-            color: #2196F3;
-            border-bottom: 1px solid transparent;
-
-            &:hover {
-              border-bottom: 1px solid #2196F3;
-            }
           }
         }
       }
