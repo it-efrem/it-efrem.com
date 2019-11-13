@@ -20,21 +20,21 @@ const aboutProject = [
 export function MKB() {
     return (
         <div>
+            <hr/>
             <p>
-                <hr/>
-                <div className='label'>I have done this:</div>
+                <span className='label'>I have done this:</span>
             </p>
             <List data={iHaveDone}/>
 
+            <hr/>
             <p>
-                <hr/>
-                <div className='label'>My tasks:</div>
+                <span className='label'>My tasks:</span>
             </p>
             <List data={tasks}/>
 
+            <hr/>
             <p>
-                <hr/>
-                <div className='label'>About the project:</div>
+                <span className='label'>About the project:</span>
             </p>
             <List data={aboutProject}/>
         </div>

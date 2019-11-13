@@ -19,21 +19,21 @@ const aboutProject = [
 export function Teacher() {
     return (
         <div>
+            <hr/>
             <p>
-                <hr/>
-                <div className='label'>I have done this:</div>
+                <span className='label'>I have done this:</span>
             </p>
             <List data={iHaveDone}/>
 
+            <hr/>
             <p>
-                <hr/>
-                <div className='label'>My task -> To help everyone in the development of topics:</div>
+                <span className='label'>My task -> To help everyone in the development of topics:</span>
             </p>
             <List data={tasks}/>
 
+            <hr/>
             <p>
-                <hr/>
-                <div className='label'>About the project:</div>
+                <span className='label'>About the project:</span>
             </p>
             <List data={aboutProject}/>
         </div>
