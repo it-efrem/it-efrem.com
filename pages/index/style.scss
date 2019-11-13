@@ -80,8 +80,13 @@
     padding: 0.4em 0;
 
     &-label {
-      font-size: 2em;
-      margin: 0.4em 0;
+      display: flex;
+      align-items: center;
+      margin: 3em 0 2em;
+
+      span {
+        font-size: 2em;
+      }
     }
   }
 
@@ -94,6 +99,96 @@
         background: #eff1f2;
         color: #666666;
         border-radius: 0.2em;
+      }
+    }
+  }
+
+  .experience {
+    &_item {
+      margin: 2em 0;
+      display: flex;
+      flex-direction: row;
+
+      &_dates {
+        min-width: max-content;
+        margin-right: 1.5em;
+      }
+
+      &_datePeriod {
+
+      }
+
+      &_workDuration {
+        font-size: 0.9em;
+        margin-top: 0.6em;
+        color: #969696;
+      }
+
+      &_company {
+        margin-bottom: 1.5em;
+
+        div {
+          &:first-child {
+            font-size: 1.25em;
+            font-weight: bold;
+            margin-bottom: 0.3em;
+          }
+          &:last-child {
+            font-size: 0.9em;
+          }
+
+          a {
+            color: #2196F3;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+              border-bottom: 1px solid #2196F3;
+            }
+          }
+        }
+      }
+
+      &_text {
+        line-height: 1.5em;
+        font-size: 0.9em;
+
+        p {
+          margin-bottom: 1.5em;
+        }
+
+        .label {
+          font-weight: bold;
+        }
+
+        hr {
+          border-width: 0;
+          border-bottom: 1px dashed black;
+          margin-top: 2.5em;
+          margin-bottom: 1em;
+        }
+
+        ul {
+          margin-left: 1.5em;
+          margin-bottom: 0.5em;
+
+          li {
+            list-style-type: square;
+          }
+
+          ul {
+            margin-left: 1.5em;
+
+            li {
+              list-style-type: none;
+
+              &:before {
+                content: '-';
+                font-size: 1.3em;
+                margin-right: 0.5em;
+              }
+            }
+          }
+        }
       }
     }
   }

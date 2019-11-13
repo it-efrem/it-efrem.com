@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import Head from 'next/head';
-import moment from 'moment'
+import moment from 'moment';
 import './style.scss'
 import {getLastCommit} from "../../hooks/api/github/getLastCommit";
 import {contacts} from "../../helpers/contacts";
-import {differenceBetweenDates} from "../../helpers/duration";
+import {differenceBetweenDates, workDuration} from "../../helpers/duration";
 import {AboutMe} from "../../components/Dumb/Experience/AboutMe";
 import {experience, skills} from './data';
 
@@ -12,6 +12,7 @@ export default function IndexPage() {
     const [contactsIsVisible, setContactsIsVisible] = useState(false);
     const lastCommit = getLastCommit();
 
+    //ToDo: Need change main section
     return (
         <>
             <Head>
@@ -26,19 +27,6 @@ export default function IndexPage() {
                             <span>My Name</span>
                             <div className='full_name'>Eugene Efremov</div>
                             <div className='passport'>Russian passport</div>
-                        </div>
-                        <div className='basic_info-block'>
-                            <span>My work experience</span>
-                            <div className='work_experience'>
-                            <span>
-                                {
-                                    moment(Date.now())
-                                        .subtract({years: 2014, months: 5})
-                                        .format('Y [years] M [month]')
-                                }
-                            </span>
-                                (Auto)
-                            </div>
                         </div>
                         <div className='basic_info-block'>
                             <div>My contacts</div>
@@ -60,16 +48,20 @@ export default function IndexPage() {
                     </div>
                 </div>
                 <div className='IndexPage_block'>
-                    <div className=''>Updated: {lastCommit} (Auto)</div>
-                    <div className='IndexPage_block-label'>Experience</div>
-                    <div>
+                    <div className=''>This page updated {lastCommit} (Auto)</div>
+                    <div className='IndexPage_block-label'>
+                        <span>Experience {getWorkExperience()}</span>
+                    </div>
+                    <div className='experience'>
                         <ul>
                             {experience.map(mapExperience)}
                         </ul>
                     </div>
                 </div>
                 <div className='IndexPage_block'>
-                    <div className='IndexPage_block-label'>Skills</div>
+                    <div className='IndexPage_block-label'>
+                        <span>Skills</span>
+                    </div>
                     <div className='skills'>
                         <ul>
                             {skills.map(mapSkills)}
@@ -77,7 +69,9 @@ export default function IndexPage() {
                     </div>
                 </div>
                 <div className='IndexPage_block'>
-                    <div className='IndexPage_block-label'>About me</div>
+                    <div className='IndexPage_block-label'>
+                        <span>About me</span>
+                    </div>
                     <AboutMe/>
                 </div>
             </div>
@@ -85,48 +79,46 @@ export default function IndexPage() {
     )
 }
 
+function getWorkExperience() {
+    const _wordDurationInt = experience.reduce((acc, item) => {
+        const duration = item.date_to - item.date_from;
+        return duration + acc;
+    }, 0);
+
+    return moment(_wordDurationInt)
+        .subtract({years: 1970})
+        .format('Y [years] M [month]')
+}
+
 function mapSkills(item, idx) {
     return <li key={idx}>{item}</li>
 }
 
 function mapExperience(item, idx) {
-    const workDuration = () => {
-        let _result = [];
-        const _duration = differenceBetweenDates(
-            moment(item.date_to),
-            moment(item.date_from)
-        );
-
-        if (_duration.years) {
-            _result.push(`${_duration.years} years`);
-        }
-        if (_duration.months) {
-            _result.push(`${_duration.months} months`);
-        }
-
-        if (_result.length) {
-            return _result.join(' ');
-        } else {
-            return null
-        }
-    };
-
     return (
         <li key={idx}>
-            <div>
-                <div>
-                    {moment(item.date_from).format('MMM YYYY')}
-                    <span>&nbsp;-&nbsp;</span>
-                    {moment(item.date_to).format('MMM YYYY')}
+            <div className='experience_item'>
+                <div className='experience_item_dates'>
+                    <div className='experience_item_datePeriod'>
+                        <span>{moment(item.date_from).format('MMM YYYY')}</span>
+                        <span>&nbsp;—&nbsp;</span>
+                        <span>{moment(item.date_to).format('MMM YYYY')}</span>
+                    </div>
+                    <div className='experience_item_workDuration'>
+                        <span>{workDuration({...item})}</span>
+                    </div>
                 </div>
                 <div>
-                    <span>{workDuration()}</span>
+                    <div className='experience_item_company'>
+                        <div>{item.company.name}</div>
+                        <div>
+                            <a href={item.company.site_link} target='_blank'>{item.company.site_name}</a>
+                        </div>
+                    </div>
+                    <div className='experience_item_text'>
+                        {item.component}
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div>{item.company.name}</div>
-                <div>{item.company.site}</div>
-                <div dangerouslySetInnerHTML={{__html: item.description}}/>
             </div>
         </li>
     )

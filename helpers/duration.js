@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export function differenceBetweenDates(to, from) {
     const [_to, _from] = [to, from];
 
@@ -19,4 +21,25 @@ export function differenceBetweenDates(to, from) {
     let seconds = _to.diff(_from, 'seconds');
 
     return {years, months, days, hours, minutes, seconds};
+}
+
+export function workDuration ({date_to, date_from}) {
+    let _result = [];
+    const _duration = differenceBetweenDates(
+        moment(date_to),
+        moment(date_from)
+    );
+
+    if (_duration.years) {
+        _result.push(`${_duration.years} years`);
+    }
+    if (_duration.months) {
+        _result.push(`${_duration.months} months`);
+    }
+
+    if (_result.length) {
+        return _result.join(' ');
+    } else {
+        return null
+    }
 }
