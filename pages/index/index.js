@@ -48,9 +48,11 @@ export default function IndexPage() {
             <div className='IndexPage'>
                 <div className="IndexPage_container">
                     <div className='IndexPage_block'>
-                        <div className=''>This page updated {lastCommit} (Auto)</div>
                         <div className='IndexPage_block-label'>
                             <span>Experience {getWorkExperience()}</span>
+                        </div>
+                        <div className='lastUpdateDate'>
+                            <span>Last update of the GitHub {lastCommit} (Auto)</span>
                         </div>
                         <div className='experience'>
                             <ul>
