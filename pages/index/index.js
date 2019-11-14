@@ -12,29 +12,25 @@ export default function IndexPage() {
     const [contactsIsVisible, setContactsIsVisible] = useState(false);
     const lastCommit = getLastCommit();
 
-    //ToDo: Need change main section
     return (
         <>
             <Head>
                 <title>Eugene Efremov - My Experience | it-efrem.com</title>
             </Head>
             <div className='IndexPage'>
-                <div className='specialty'>JavaScript / React Developer</div>
-                <div className='main'>
-                    <div className='photo'/>
-                    <div className='basic_info'>
-                        <div className='basic_info-block'>
-                            <span>My Name</span>
-                            <div className='full_name'>Eugene Efremov</div>
-                            <div className='passport'>Russian passport</div>
+                <div className="main_container">
+                    <div className="main_layout">
+                        <div>
+                            <div className="myPhoto"/>
                         </div>
-                        <div className='basic_info-block'>
-                            <div>My contacts</div>
-                            <div className='contacts'>
+                        <div className='main_layout_right'>
+                            <span className="mySpeciality">React Developer</span>
+                            <span className="myName">Eugene Efremov</span>
+                            <span className="myContacts">
                                 {
                                     !contactsIsVisible ?
                                         <span className='link' onClick={() => setContactsIsVisible(true)}>
-                                                (click here to show)
+                                                Click for view contacts
                                             </span>
                                         :
                                         <div>
@@ -43,36 +39,41 @@ export default function IndexPage() {
                                             <i className="far fa-envelope"/> {contacts.getEmail}
                                         </div>
                                 }
-                            </div>
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div className='IndexPage_block'>
-                    <div className=''>This page updated {lastCommit} (Auto)</div>
-                    <div className='IndexPage_block-label'>
-                        <span>Experience {getWorkExperience()}</span>
+
+            </div>
+            <div className='IndexPage'>
+                <div className="IndexPage_container">
+                    <div className='IndexPage_block'>
+                        <div className=''>This page updated {lastCommit} (Auto)</div>
+                        <div className='IndexPage_block-label'>
+                            <span>Experience {getWorkExperience()}</span>
+                        </div>
+                        <div className='experience'>
+                            <ul>
+                                {experience.map(mapExperience)}
+                            </ul>
+                        </div>
                     </div>
-                    <div className='experience'>
-                        <ul>
-                            {experience.map(mapExperience)}
-                        </ul>
+                    <div className='IndexPage_block'>
+                        <div className='IndexPage_block-label'>
+                            <span>Skills</span>
+                        </div>
+                        <div className='skills'>
+                            <ul>
+                                {skills.map(mapSkills)}
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div className='IndexPage_block'>
-                    <div className='IndexPage_block-label'>
-                        <span>Skills</span>
+                    <div className='IndexPage_block'>
+                        <div className='IndexPage_block-label'>
+                            <span>About me</span>
+                        </div>
+                        <AboutMe/>
                     </div>
-                    <div className='skills'>
-                        <ul>
-                            {skills.map(mapSkills)}
-                        </ul>
-                    </div>
-                </div>
-                <div className='IndexPage_block'>
-                    <div className='IndexPage_block-label'>
-                        <span>About me</span>
-                    </div>
-                    <AboutMe/>
                 </div>
             </div>
         </>

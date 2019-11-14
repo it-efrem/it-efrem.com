@@ -24,11 +24,11 @@ export default class MyApp extends App {
                     <script src="https://kit.fontawesome.com/321ff4e708.js" crossOrigin="anonymous"></script>
                     <link type='text/css' href='../static/fonts/roboto/roboto.css'/>
                 </Head>
-                <Header/>
                 <PageContent>
+                    <Header/>
                     <Component {...pageProps} />
+                    <Footer/>
                 </PageContent>
-                <Footer/>
             </>
         )
     }

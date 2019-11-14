@@ -1,5 +1,16 @@
 import Head from 'next/head';
 
+const links = [
+    {
+        link: 'https://css-tricks.com/',
+        title: '',
+    },
+    {
+        link: 'https://jestjs.io/',
+        title: '',
+    },
+];
+
 export default function UsefulForDevelopers() {
     return (
         <>

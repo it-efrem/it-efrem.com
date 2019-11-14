@@ -1,78 +1,20 @@
-.IndexPage {
-  width: 47em;
-  max-width: 47em;
+@import "../variables";
 
-  .specialty {
-    font-size: 3em;
-    text-align: center;
-    margin-bottom: 0.5em;
-    font-weight: bold;
+.IndexPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .link {
+    &:hover {
+      border-color: white;
+    }
   }
 
-  .main {
-    display: flex;
-    margin-bottom: 2em;
-
-    .photo {
-      background: url("/static/img/i.jpg");
-      background-position: inherit;
-      background-size: cover;
-      width: 18em;
-      height: 18em;
-      min-width: 18em;
-      min-height: 18em;
-      border-radius: 0.5em;
-      box-shadow: 3px 3px 0px 0px #e7e5e4;
-    }
-
-    .basic_info {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-left: 2em;
-
-      &-block {
-        > * {
-          &:first-child {
-            color: #dac0b3;
-            font-size: 0.8em;
-          }
-
-          &:not(:first-child) {
-            margin: 0.5rem;
-          }
-        }
-      }
-    }
-
-    .full_name {
-      font-size: 3em;
-      margin-bottom: -0.15em;
-    }
-
-    .passport {
-      font-size: 0.65em;
-      text-align: right;
-      color: #7d7d7d;
-    }
-
-    .work_experience {
-      font-size: 1.3em;
-      margin-bottom: 1em;
-    }
-
-    .contacts {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      height: 2.4em;
-      min-height: 2.4em;
-
-      > div {
-        min-width: 4em;
-        line-height: 1.2em;
-      }
-    }
+  &_container {
+    width: 47em;
+    max-width: 47em;
   }
 
   &_block {
@@ -87,6 +29,94 @@
       span {
         font-size: 2em;
       }
+    }
+  }
+
+  .main {
+    &_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 40em;
+      background: $main-container_color;
+
+      //ToDo: Create mixin
+      span {
+        color: white;
+
+        //ToDo: Create mixin
+        &:nth-child(1) {
+          text-shadow: 5px 5px $text-shadow_color_1,
+          10px 10px $text-shadow_color_1,
+          15px 15px $text-shadow_color_1,
+          20px 20px $text-shadow_color_1;
+        }
+        &:nth-child(2) {
+          text-shadow: 5px 5px $text-shadow_color_2,
+          10px 10px $text-shadow_color_2,
+          15px 15px $text-shadow_color_2,
+          20px 20px $text-shadow_color_2;
+        }
+        &:nth-child(3) {
+          text-shadow: 5px 5px $text-shadow_color_3,
+          10px 10px $text-shadow_color_3,
+          15px 15px $text-shadow_color_3,
+          20px 20px $text-shadow_color_3;
+        }
+      }
+    }
+
+    &_layout {
+      min-width: 70em;
+      display: flex;
+      flex-direction: row;
+
+      &_right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 5em;
+      }
+    }
+  }
+
+  .mySpeciality {
+    font-size: 5em;
+    font-weight: bold;
+  }
+
+  .myName {
+    font-size: 5em;
+  }
+
+  .myPhoto {
+    background: url("/static/img/i.jpg");
+    background-position: inherit;
+    background-size: cover;
+    width: 22em;
+    height: 22em;
+    min-width: 22em;
+    min-height: 22em;
+    border-radius: 100%;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+  }
+
+  .myContacts {
+    position: absolute;
+    bottom: 0;
+    right: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2.4em;
+    min-height: 2.4em;
+
+    > div {
+      min-width: 4em;
+      line-height: 1.2em;
     }
   }
 

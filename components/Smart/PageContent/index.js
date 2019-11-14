@@ -4,7 +4,7 @@ export default function PageContent({children}) {
     return (
         <section className='PageContent'>
             <article>
-            {children}
+                {children}
             </article>
         </section>
     )
