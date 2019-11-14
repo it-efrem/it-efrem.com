@@ -27,7 +27,7 @@
       margin: 3em 0 2em;
 
       span {
-        font-size: 2em;
+        font-size: 3.5em;
       }
     }
   }
@@ -147,6 +147,9 @@
       margin: 2em 0;
       display: flex;
       flex-direction: row;
+      box-shadow: 0 0 0.7em 0px rgba(0, 0, 0, 0.2);
+      border-radius: 0.3em;
+      padding: 1.5em 1em;
 
       &_dates {
         min-width: max-content;
@@ -183,18 +186,18 @@
         font-size: 0.9em;
 
         p {
-          margin-bottom: 1.5em;
+          margin-top: 1.5em;
+          margin-bottom: 0.5em;
         }
 
         .label {
           font-weight: bold;
-        }
 
-        hr {
-          border-width: 0;
-          border-bottom: 1px dashed black;
-          margin-top: 2.5em;
-          margin-bottom: 1em;
+          &_big {
+            padding-left: 0.5em;
+            padding: 0.5em;
+            background: rgba(143, 59, 255, 0.15);
+          }
         }
 
         ul {
