@@ -77,6 +77,19 @@
         flex-direction: column;
         justify-content: space-around;
         margin-left: 5em;
+        color: white;
+
+        > span {
+          &:nth-child(1) {
+            @include text-shadow-line($text-shadow_color_1);
+          }
+          &:nth-child(2) {
+            @include text-shadow-line($text-shadow_color_2);
+          }
+          &:nth-child(3) {
+            @include text-shadow-line($text-shadow_color_3);
+          }
+        }
       }
     }
   }

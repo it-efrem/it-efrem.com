@@ -3,3 +3,15 @@ $main-container_color: #9c27b0;
 $text-shadow_color_1: #761d86;
 $text-shadow_color_2: #6a1d7a;
 $text-shadow_color_3: #5d1d6d;
+
+@function generate-text-shadow ($from, $to, $measure, $text_color) {
+  $result: null;
+  @for $i from $from through $to {
+    $result: $result, #{$i}#{$measure} #{$i}#{$measure} $text_color
+  }
+  @return $result;
+}
+
+@mixin text-shadow-line($text_color) {
+  text-shadow: generate-text-shadow(1, 400, 'px', $text_color);
+}
