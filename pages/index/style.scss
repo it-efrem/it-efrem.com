@@ -39,31 +39,8 @@
       width: 100%;
       min-height: 40em;
       background: $main-container_color;
-
-      //ToDo: Create mixin
-      span {
-        color: white;
-
-        //ToDo: Create mixin
-        &:nth-child(1) {
-          text-shadow: 5px 5px $text-shadow_color_1,
-          10px 10px $text-shadow_color_1,
-          15px 15px $text-shadow_color_1,
-          20px 20px $text-shadow_color_1;
-        }
-        &:nth-child(2) {
-          text-shadow: 5px 5px $text-shadow_color_2,
-          10px 10px $text-shadow_color_2,
-          15px 15px $text-shadow_color_2,
-          20px 20px $text-shadow_color_2;
-        }
-        &:nth-child(3) {
-          text-shadow: 5px 5px $text-shadow_color_3,
-          10px 10px $text-shadow_color_3,
-          15px 15px $text-shadow_color_3,
-          20px 20px $text-shadow_color_3;
-        }
-      }
+      overflow: hidden;
+      z-index: 1;
     }
 
     &_layout {
@@ -75,7 +52,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         margin-left: 5em;
         color: white;
 

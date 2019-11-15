@@ -29,9 +29,11 @@ export default function IndexPage() {
                             <span className="myContacts">
                                 {
                                     !contactsIsVisible ?
-                                        <span className='link' onClick={() => setContactsIsVisible(true)}>
-                                                Click for view contacts
-                                            </span>
+                                        <div onClick={() => setContactsIsVisible(true)}>
+                                            <i className="fas fa-mobile-alt"/>
+                                            <br/>
+                                            <i className="far fa-envelope"/>
+                                        </div>
                                         :
                                         <div>
                                             <i className="fas fa-mobile-alt"/> {contacts.getPhone}

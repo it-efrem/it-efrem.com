@@ -6,7 +6,7 @@ export default function Header() {
         <header>
             <nav>
                 <ul>
-                    <li>My:</li>
+                    <li>About me <i className="fas fa-chevron-right"/></li>
                     {menuItems.map(mapMenu)}
                 </ul>
             </nav>
