@@ -42,8 +42,8 @@ export default function Footer() {
                 </ul>
             </div>
             <div className='copyright'>
-                <div>
-                    <i className="far fa-envelope"/>
+                <div className='copyright_email'>
+                    <mark>📧</mark>
                     &nbsp;
                     {
                         !contactsIsVisible ?
@@ -57,12 +57,12 @@ export default function Footer() {
                     }
                 </div>
                 <div>
-                    <p>Used React.js + Next.js (SSR), SCSS</p>
                     <p>
                         <span>See this site in</span>
                         &nbsp;
                         <a href='https://github.com/Evgeny-Bukovski/it-efrem.com' target="_blank">GitHub repository</a>
                     </p>
+                    <p>Used React.js + Next.js, SCSS</p>
                     <p>Dev by Eugene &copy; 2014 - {moment(Date.now()).format('YYYY')}</p>
                 </div>
             </div>

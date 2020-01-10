@@ -39,9 +39,15 @@
 
     &-label {
       margin: 3em 0 1.5em;
+      white-space: nowrap;
 
       span {
         font-size: 3.5em;
+      }
+
+      mark {
+        font-size: 3em;
+        vertical-align: top;
       }
     }
   }

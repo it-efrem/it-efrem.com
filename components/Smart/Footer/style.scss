@@ -27,6 +27,23 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &_email {
+      display: flex;
+      align-items: center;
+
+      .link {
+        align-self: flex-end;
+      }
+
+      mark {
+        font-size: 2em;
+      }
+
+      span {
+        font-size: 1.4em;
+      }
+    }
   }
 
   a {

@@ -67,6 +67,7 @@ export default function IndexPage() {
                 <div className="IndexPage_container">
                     <div className='IndexPage_block'>
                         <div className='IndexPage_block-label'>
+                            <mark>⚡</mark>
                             <span>Experience {getWorkExperience()}</span>
                         </div>
                         <div className='lastUpdateDate'>
@@ -82,6 +83,7 @@ export default function IndexPage() {
                     </div>
                     <div className='IndexPage_block'>
                         <div className='IndexPage_block-label'>
+                            <mark>🔨</mark>
                             <span>Skills</span>
                         </div>
                         <div className='skills'>
@@ -92,6 +94,7 @@ export default function IndexPage() {
                     </div>
                     <div className='IndexPage_block'>
                         <div className='IndexPage_block-label'>
+                            <mark>👽</mark>
                             <span>About me</span>
                         </div>
                         <AboutMe/>
