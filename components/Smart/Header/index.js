@@ -7,6 +7,7 @@ export default function Header() {
     const [headerScroll, setHeaderScroll] = useState(false);
 
     useEffect(() => {
+        detectScroll();
         document.addEventListener('scroll', detectScroll);
         return () => document.removeEventListener('scroll', detectScroll);
     }, []);
@@ -54,16 +55,16 @@ const menuItems = [
         label: 'GitHub',
         link: 'https://github.com/Evgeny-Bukovski'
     },
-    {
-        icon: 'fab fa-medium',
-        label: 'Medium',
-        path: '/articles?tags=medium'
-    },
-    {
-        icon: 'fab fa-npm',
-        label: 'NPM',
-        path: '/articles?tags=npm'
-    },
+    // {
+    //     icon: 'fab fa-medium',
+    //     label: 'Medium',
+    //     path: '/articles?tags=medium'
+    // },
+    // {
+    //     icon: 'fab fa-npm',
+    //     label: 'NPM',
+    //     path: '/articles?tags=npm'
+    // },
     {
         icon: 'fab fa-stack-overflow',
         label: 'StackOverflow',
