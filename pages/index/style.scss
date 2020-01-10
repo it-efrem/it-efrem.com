@@ -6,11 +6,11 @@
   border-radius: 0.25em;
   font-weight: bold;
   transition: 0.25s;
-  background: #fce100;
+  background: $light;
   color: black;
 
   &:hover {
-    background: #f7630c;
+    background: $yellow;
     color: black;
     transition: 0.25s;
   }
@@ -60,6 +60,7 @@
     }
 
     &_layout {
+      position: relative;
       min-width: 70em;
       display: flex;
       flex-direction: row;
@@ -97,15 +98,12 @@
   }
 
   .myPhoto {
-    background: url("/static/img/i.jpg");
-    background-position: inherit;
-    background-size: cover;
-    width: 22em;
-    height: 22em;
-    min-width: 22em;
-    min-height: 22em;
+    width: 18em;
+    height: 18em;
+    min-width: 18em;
+    min-height: 18em;
     border-radius: 100%;
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+    border: 0.5em solid $light;
   }
 
   .myContacts {
@@ -115,7 +113,7 @@
     height: 2.4em;
     min-height: 2.4em;
     margin-top: 2em;
-    color: #fce100;
+    color: $light;
     font-weight: bold;
 
     &_row {
@@ -166,12 +164,8 @@
     }
 
     &_item {
-      margin: 2em 0;
       display: flex;
       flex-direction: row;
-      box-shadow: 0 0 0.7em 0px rgba(0, 0, 0, 0.2);
-      border-radius: 0.3em;
-      padding: 1.5em 1em;
 
       &_dates {
         min-width: max-content;
@@ -199,49 +193,6 @@
           }
           &:last-child {
             font-size: 0.9em;
-          }
-        }
-      }
-
-      &_text {
-        line-height: 1.5em;
-        font-size: 0.9em;
-
-        p {
-          margin-top: 1.5em;
-          margin-bottom: 0.5em;
-        }
-
-        .label {
-          font-weight: bold;
-
-          &_big {
-            padding-left: 0.5em;
-            padding: 0.5em;
-            background: rgba(143, 59, 255, 0.15);
-          }
-        }
-
-        ul {
-          margin-left: 1.5em;
-          margin-bottom: 0.5em;
-
-          li {
-            list-style-type: square;
-          }
-
-          ul {
-            margin-left: 1.5em;
-
-            li {
-              list-style-type: none;
-
-              &:before {
-                content: '-';
-                font-size: 1.3em;
-                margin-right: 0.5em;
-              }
-            }
           }
         }
       }

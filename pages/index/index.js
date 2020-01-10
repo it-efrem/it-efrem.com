@@ -8,6 +8,9 @@ import {differenceBetweenDates, workDuration} from "../../helpers/duration";
 import {AboutMe} from "../../components/Dumb/Experience/AboutMe";
 import {experience, skills} from './data';
 
+//ToDo: Использовать CSS Модули
+//ToDo: Разбить на более мелкие компоненты
+//ToDo: Мобильная верстка
 export default function IndexPage() {
     const [contactsIsVisible, setContactsIsVisible] = useState(false);
     const lastCommit = getLastCommit();
@@ -50,37 +53,26 @@ export default function IndexPage() {
                             </div>
                         </div>
                         <div className='main_layout_right'>
-                            <span className="mySpeciality">React Developer</span>
-                            <span className="myName">Eugene Efremov</span>
-                            <span className="myContacts">
-                                {
-                                    !contactsIsVisible ?
-                                        <div onClick={() => setContactsIsVisible(true)}>
-                                            <i className="fas fa-mobile-alt"/>
-                                            <br/>
-                                            <i className="far fa-envelope"/>
-                                        </div>
-                                        :
-                                        <div>
-                                            <i className="fas fa-mobile-alt"/> {contacts.getPhone}
-                                            <br/>
-                                            <i className="far fa-envelope"/> {contacts.getEmail}
-                                        </div>
-                                }
+                            <span className="mySpeciality">
+                                <mark>⚛</mark>
+                                React Developer
+                            </span>
+                            <span className="myName">
+                                <mark>🔥</mark>
+                                Eugene Efremov
                             </span>
                         </div>
                     </div>
                 </div>
-
-            </div>
-            <div className='IndexPage'>
                 <div className="IndexPage_container">
                     <div className='IndexPage_block'>
                         <div className='IndexPage_block-label'>
                             <span>Experience {getWorkExperience()}</span>
                         </div>
                         <div className='lastUpdateDate'>
-                            <span>Last update of the GitHub {lastCommit} (Auto)</span>
+                            <i className="fas fa-magic"/>
+                            &nbsp;
+                            <span title="Auto update">Last update of the GitHub {lastCommit}</span>
                         </div>
                         <div className='experience'>
                             <ul>
@@ -128,7 +120,7 @@ function mapSkills(item, idx) {
 function mapExperience(item, idx) {
     return (
         <li key={idx}>
-            <div className='experience_item'>
+            <div className='experience_item shadow-block'>
                 <div className='experience_item_dates'>
                     <div className='experience_item_datePeriod'>
                         <span>{moment(item.date_from).format('MMM YYYY')}</span>
@@ -146,7 +138,7 @@ function mapExperience(item, idx) {
                             <a href={item.company.site_link} target='_blank'>{item.company.site_name}</a>
                         </div>
                     </div>
-                    <div className='experience_item_text'>
+                    <div className='shadow-block_text'>
                         {item.component}
                     </div>
                 </div>
