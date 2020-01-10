@@ -8,8 +8,8 @@ export default function Footer() {
 
     return (
         <footer>
-            <div className='location'>
-                <span className='location_label'>Location:</span>
+            <div>
+                <span className='label'>My location:</span>
                 <ul>
                     <li>
                         <i className="fas fa-globe-americas"/>
@@ -41,26 +41,30 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
-            <div className='location_copy'>
+            <div className='copyright'>
                 <div>
-                    <span>My Email&nbsp;</span>
+                    <i className="far fa-envelope"/>
+                    &nbsp;
                     {
                         !contactsIsVisible ?
                             <span className='link' onClick={() => setContactsIsVisible(true)}>
-                                (click here to show)
+                                click to email
                             </span>
                             :
                             <span>
-                                <i className="far fa-envelope"/> {contacts.getEmail}
+                                {contacts.getEmail}
                             </span>
                     }
                 </div>
                 <div>
-                    <span>See this site in </span>
-                    <a href='https://github.com/Evgeny-Bukovski/it-efrem.com' target="_blank">GitHub repository</a>
+                    <p>Used React.js + Next.js (SSR), SCSS</p>
+                    <p>
+                        <span>See this site in</span>
+                        &nbsp;
+                        <a href='https://github.com/Evgeny-Bukovski/it-efrem.com' target="_blank">GitHub repository</a>
+                    </p>
+                    <p>Dev by Eugene &copy; 2014 - {moment(Date.now()).format('YYYY')}</p>
                 </div>
-                <div>Used React.js + Next.js (SSR), SCSS</div>
-                <div>Dev by Eugene &copy; 2014 - {moment(Date.now()).format('YYYY')}</div>
             </div>
         </footer>
     )

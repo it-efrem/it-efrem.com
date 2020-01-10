@@ -1,32 +1,32 @@
+@import "../../../pages/variables.scss";
+
 footer {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  background: #f7f3f1;
+  background: $yellow;
   padding: 1rem 0;
 
-  .location {
-    &_label {
-      font-weight: bold;
-    }
+  .label {
+    font-weight: bold;
+  }
 
-    ul {
-      font-size: 0.9rem;
+  ul {
+    font-size: 0.9rem;
 
-      li {
-        padding: 0.2rem;
+    li {
+      padding: 0.2rem;
 
-        i {
-          padding-right: 0.2rem;
-        }
+      i {
+        padding-right: 0.2rem;
       }
     }
+  }
 
-    &_copy {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-    }
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   a {
@@ -38,5 +38,9 @@ footer {
     &:hover {
       border-color: black;
     }
+  }
+
+  p {
+    margin-top: 0.5em;
   }
 }
