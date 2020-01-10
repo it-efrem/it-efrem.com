@@ -12,7 +12,7 @@ export default function Header() {
         return () => document.removeEventListener('scroll', detectScroll);
     }, []);
 
-    function detectScroll () {
+    function detectScroll() {
         if (window.pageYOffset > 0) {
             setHeaderScroll(true);
         }
@@ -27,7 +27,11 @@ export default function Header() {
         })}>
             <nav>
                 <ul>
-                    <li>About me <i className="fas fa-chevron-right"/></li>
+                    <li>
+                        <span>About me</span>
+                        &nbsp;
+                        <mark>☞</mark>
+                    </li>
                     {menuItems.map(mapMenu)}
                 </ul>
             </nav>
@@ -70,10 +74,15 @@ const menuItems = [
         label: 'StackOverflow',
         link: 'https://stackoverflow.com/users/8963706/it-efrem'
     },
+    // {
+    //     icon: 'fas fa-hospital-symbol',
+    //     label: 'Habr',
+    //     path: '/articles?tags=habr'
+    // },
     {
         icon: 'fas fa-hospital-symbol',
         label: 'Habr',
-        path: '/articles?tags=habr'
+        path: 'https://habr.com/ru/users/it-efrem/posts/'
     },
     {
         icon: 'fas fa-graduation-cap',
