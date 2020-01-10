@@ -1,9 +1,29 @@
-import {Link} from '../../Dumb/Link/index'
+import React, {useEffect, useState} from 'react';
+import {Link} from '../../Dumb/Link/index';
+import classNames from 'classnames'
 import './style.scss'
 
 export default function Header() {
+    const [headerScroll, setHeaderScroll] = useState(false);
+
+    useEffect(() => {
+        document.addEventListener('scroll', detectScroll);
+        return () => document.removeEventListener('scroll', detectScroll);
+    }, []);
+
+    function detectScroll () {
+        if (window.pageYOffset > 0) {
+            setHeaderScroll(true);
+        }
+        if (window.pageYOffset === 0) {
+            setHeaderScroll(false);
+        }
+    }
+
     return (
-        <header>
+        <header className={classNames({
+            'header_scroll': headerScroll
+        })}>
             <nav>
                 <ul>
                     <li>About me <i className="fas fa-chevron-right"/></li>

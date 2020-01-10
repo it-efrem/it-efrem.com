@@ -1,5 +1,11 @@
 @import "../../../pages/variables";
 
+.header_scroll {
+  padding: 0.5em 1em;
+  background: #9a33ad;
+  transition: 0.3s;
+}
+
 header {
   position: fixed;
   display: flex;
@@ -8,11 +14,7 @@ header {
   padding: 1em;
   background: transparent;
   z-index: 2;
-
-  //ToDo: add ref in React
-  &_scroll {
-    background: $main-container_color;
-  }
+  transition: 0.3s;
 
   nav {
     max-width: max-content;
