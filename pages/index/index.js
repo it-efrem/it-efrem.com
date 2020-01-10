@@ -22,6 +22,32 @@ export default function IndexPage() {
                     <div className="main_layout">
                         <div>
                             <div className="myPhoto"/>
+                            <div className="myContacts">
+                                {
+                                    //ToDo: Create Component Button
+                                    !contactsIsVisible ?
+                                        <div className='clickContacts'>
+                                            <div className='btn' onClick={() => setContactsIsVisible(true)}>
+                                                <i className="far fa-envelope"/>
+                                                &nbsp;
+                                                <span>View contacts</span>
+                                            </div>
+                                        </div>
+                                        :
+                                        <div className='myContacts_data'>
+                                            <div className='myContacts_row'>
+                                                <i className="fas fa-mobile-alt"/>
+                                                &nbsp;
+                                                <span>{contacts.getPhone}</span>
+                                            </div>
+                                            <div className='myContacts_row'>
+                                                <i className="far fa-envelope"/>
+                                                &nbsp;
+                                                <span>{contacts.getEmail}</span>
+                                            </div>
+                                        </div>
+                                }
+                            </div>
                         </div>
                         <div className='main_layout_right'>
                             <span className="mySpeciality">React Developer</span>

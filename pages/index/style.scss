@@ -1,5 +1,21 @@
 @import "../variables";
 
+.btn {
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  font-weight: bold;
+  transition: 0.25s;
+  background: #fce100;
+  color: black;
+
+  &:hover {
+    background: #f7630c;
+    color: black;
+    transition: 0.25s;
+  }
+}
+
 .IndexPage {
   display: flex;
   flex-direction: column;
@@ -93,18 +109,36 @@
   }
 
   .myContacts {
-    position: absolute;
-    bottom: 0;
-    right: 2em;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     height: 2.4em;
     min-height: 2.4em;
+    margin-top: 2em;
+    color: #fce100;
+    font-weight: bold;
 
-    > div {
+    &_row {
       min-width: 4em;
-      line-height: 1.2em;
+      line-height: 1.4em;
+
+      i {
+        min-width: 1.5em;
+        display: inline-block;
+        text-align: center;
+      }
+    }
+
+    &_data {
+      .fas, .far {
+        color: #f7af0c;
+      }
+    }
+
+    .clickContacts {
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
 
