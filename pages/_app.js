@@ -9,7 +9,6 @@ import Header from "../components/Smart/Header";
 import Footer from "../components/Smart/Footer";
 import PageContent from "../components/Smart/PageContent";
 
-//ToDo: Replace fontawesome to files
 export default class MyApp extends App {
     render() {
         const {Component, pageProps} = this.props;

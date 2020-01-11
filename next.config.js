@@ -1,8 +1,8 @@
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const withPlugins = require('next-compose-plugins');
 const withSourceMaps = require('@zeit/next-source-maps');
 const sass = require('@zeit/next-sass');
 
-//ToDo: add plugin for clear /build before run build script
 let nextConfig = {
     distDir: 'build',
     webpack: (config, {buildId, dev, isServer, defaultLoaders, webpack}) => {
@@ -18,6 +18,11 @@ let nextConfig = {
                 }
             }
         });
+
+        config.plugins.push(
+            new CleanWebpackPlugin()
+        );
+
         return config
     },
     webpackDevMiddleware: config => {
