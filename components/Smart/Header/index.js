@@ -88,8 +88,8 @@ const menuItems = [
     },
     {
         icon: 'fas fa-graduation-cap',
-        label: 'Certifications',
-        path: '/certifications'
+        label: 'Certificates',
+        path: '/certificates'
     },
     {
         icon: 'fas fa-heart',

@@ -52,7 +52,7 @@ export default function Footer() {
                             </span>
                             :
                             <span>
-                                {contacts.getEmail}
+                                <a href={`mailto:${contacts.getEmail}`}>{contacts.getEmail}</a>
                             </span>
                     }
                 </div>
