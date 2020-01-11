@@ -33,7 +33,7 @@ export default function Header() {
                             <a>
                                 <span>About me</span>
                                 &nbsp;
-                                <mark>☞</mark>
+                                <mark>👉</mark>
                             </a>
                         </Link>
                     </li>

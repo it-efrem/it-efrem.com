@@ -4,6 +4,7 @@ import Head from 'next/head';
 import './reset.scss'
 import './style.scss'
 
+import '../static/data/ym'
 import Header from "../components/Smart/Header";
 import Footer from "../components/Smart/Footer";
 import PageContent from "../components/Smart/PageContent";
@@ -31,6 +32,13 @@ export default class MyApp extends App {
                     <Header/>
                     <Component {...pageProps} />
                     <Footer/>
+                    <noscript>
+                        <div>
+                            <img src="https://mc.yandex.ru/watch/56986774" style={{
+                                position: 'absolute', left: '-9999px'
+                            }} alt=""/>
+                        </div>
+                    </noscript>
                 </PageContent>
             </>
         )
