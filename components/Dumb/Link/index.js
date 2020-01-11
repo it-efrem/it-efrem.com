@@ -1,23 +1,28 @@
-export function Link({path, link, icon, label}) {
-    const aParametrs = {
-        href: null,
-        target: null
-    };
+import React from 'react';
+import Link from 'next/link';
 
-    aParametrs.href = path || link;
+export function NavLink({link, icon, label}) {
+    const otherSite = link.includes('http');
 
-    if (path) {
-        aParametrs.target = '_self';
+    if (!otherSite) {
+        return (
+            <Link href={link}>
+                <a>
+                    {
+                        icon ? <i className={icon}/> : null
+                    }
+                    {label}
+                </a>
+            </Link>
+        );
+    } else {
+        return (
+            <a href={link} target='_blank'>
+                {
+                    icon ? <i className={icon}/> : null
+                }
+                {label}
+            </a>
+        );
     }
-
-    if (link) {
-        aParametrs.target = '_blank';
-    }
-
-    return <a {...aParametrs}>
-        {
-            icon ? <i className={icon}/> : null
-        }
-        {label}
-    </a>;
 }

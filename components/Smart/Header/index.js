@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Link} from '../../Dumb/Link/index';
+import {NavLink} from '../../Dumb/Link/index';
 import classNames from 'classnames'
 import './style.scss'
 
@@ -44,7 +44,7 @@ export default function Header() {
 function mapMenu(item) {
     return (
         <li key={item.label}>
-            <Link {...item}/>
+            <NavLink {...item}/>
         </li>
     );
 }
@@ -54,7 +54,7 @@ const menuItems = [
     {
         icon: 'fas fa-vial',
         label: 'Experience',
-        path: '/'
+        link: '/'
     },
     {
         icon: 'fab fa-github-alt',
@@ -64,12 +64,12 @@ const menuItems = [
     // {
     //     icon: 'fab fa-medium',
     //     label: 'Medium',
-    //     path: '/articles?tags=medium'
+    //     link: '/articles?tags=medium'
     // },
     // {
     //     icon: 'fab fa-npm',
     //     label: 'NPM',
-    //     path: '/articles?tags=npm'
+    //     link: '/articles?tags=npm'
     // },
     {
         icon: 'fab fa-stack-overflow',
@@ -79,7 +79,7 @@ const menuItems = [
     // {
     //     icon: 'fas fa-hospital-symbol',
     //     label: 'Habr',
-    //     path: '/articles?tags=habr'
+    //     link: '/articles?tags=habr'
     // },
     {
         icon: 'fas fa-hospital-symbol',
@@ -89,11 +89,11 @@ const menuItems = [
     {
         icon: 'fas fa-graduation-cap',
         label: 'Certificates',
-        path: '/certificates'
+        link: '/certificates'
     },
     {
         icon: 'fas fa-heart',
         label: 'Useful links',
-        path: '/useful_for_developers'
+        link: '/useful_for_developers'
     },
 ];
