@@ -17,11 +17,6 @@
 }
 
 .IndexPage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-
   .link {
     &:hover {
       border-color: white;
@@ -36,20 +31,6 @@
   &_block {
     margin: 0.4em 0;
     padding: 0.4em 0;
-
-    &-label {
-      margin: 3em 0 1.5em;
-      white-space: nowrap;
-
-      span {
-        font-size: 3.5em;
-      }
-
-      mark {
-        font-size: 3em;
-        vertical-align: top;
-      }
-    }
   }
 
   .main {

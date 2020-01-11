@@ -91,7 +91,7 @@ const menuItems = [
     },
     {
         icon: 'fas fa-heart',
-        label: 'Useful',
+        label: 'Useful links',
         path: '/useful_for_developers'
     },
 ];

@@ -64,42 +64,44 @@ export default function IndexPage() {
                         </div>
                     </div>
                 </div>
-                <div className="IndexPage_container">
-                    <div className='IndexPage_block'>
-                        <div className='IndexPage_block-label'>
-                            <mark>⚡</mark>
-                            <span>Experience {getWorkExperience()}</span>
+                <article>
+                    <div className="IndexPage_container">
+                        <div className='IndexPage_block'>
+                            <h2>
+                                <mark>⚡</mark>
+                                <span>Experience {getWorkExperience()}</span>
+                            </h2>
+                            <div className='lastUpdateDate'>
+                                <i className="fas fa-magic"/>
+                                &nbsp;
+                                <span title="Auto update">Last update of the GitHub {lastCommit}</span>
+                            </div>
+                            <div className='experience'>
+                                <ul>
+                                    {experience.map(mapExperience)}
+                                </ul>
+                            </div>
                         </div>
-                        <div className='lastUpdateDate'>
-                            <i className="fas fa-magic"/>
-                            &nbsp;
-                            <span title="Auto update">Last update of the GitHub {lastCommit}</span>
+                        <div className='IndexPage_block'>
+                            <h2>
+                                <mark>🔨</mark>
+                                <span>Skills</span>
+                            </h2>
+                            <div className='skills'>
+                                <ul>
+                                    {skills.map(mapSkills)}
+                                </ul>
+                            </div>
                         </div>
-                        <div className='experience'>
-                            <ul>
-                                {experience.map(mapExperience)}
-                            </ul>
+                        <div className='IndexPage_block'>
+                            <h2>
+                                <mark>👽</mark>
+                                <span>About me</span>
+                            </h2>
+                            <AboutMe/>
                         </div>
                     </div>
-                    <div className='IndexPage_block'>
-                        <div className='IndexPage_block-label'>
-                            <mark>🔨</mark>
-                            <span>Skills</span>
-                        </div>
-                        <div className='skills'>
-                            <ul>
-                                {skills.map(mapSkills)}
-                            </ul>
-                        </div>
-                    </div>
-                    <div className='IndexPage_block'>
-                        <div className='IndexPage_block-label'>
-                            <mark>👽</mark>
-                            <span>About me</span>
-                        </div>
-                        <AboutMe/>
-                    </div>
-                </div>
+                </article>
             </div>
         </>
     )

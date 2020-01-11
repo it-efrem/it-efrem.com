@@ -4,6 +4,38 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+h1, h2 {
+  margin: 3em 0 1.5em;
+  white-space: nowrap;
+  font-weight: normal;
+
+  span {
+    font-size: 3.5em;
+  }
+
+  mark {
+    font-size: 3em;
+    vertical-align: top;
+  }
+}
+
+h1 {
+  span {
+    font-size: 4.5em;
+  }
+
+  mark {
+    font-size: 3.5em;
+  }
+}
+
 .link {
   color: black;
   padding-bottom: 0.1em;
@@ -13,14 +45,6 @@ body {
     border-color: black;
     cursor: pointer;
   }
-}
-
-mark {
-  background-color: transparent;
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
-  min-width: 1.5em;
-  display: inline-block;
-  text-align: center;
 }
 
 .shadow-block {
@@ -71,4 +95,12 @@ mark {
       }
     }
   }
+}
+
+mark {
+  background-color: transparent;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  min-width: 1.5em;
+  display: inline-block;
+  text-align: center;
 }
