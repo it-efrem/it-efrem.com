@@ -7,11 +7,12 @@ let nextConfig = {
     distDir: 'build',
     webpack: (config, {buildId, dev, isServer, defaultLoaders, webpack}) => {
         config.module.rules.push({
-            test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+            test: /\.(eot|woff|woff2|ttf|svg|png|jpg|jpeg|gif)$/,
             use: {
                 loader: 'file-loader',
                 options: {
-                    esModule: false,
+                    fallback: require.resolve('url-loader'),
+                    esModule: true,
                     name: '[hash].[ext]',
                     outputPath: 'static/files',
                 }
