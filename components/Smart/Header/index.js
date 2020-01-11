@@ -28,9 +28,11 @@ export default function Header() {
             <nav>
                 <ul>
                     <li>
-                        <span>About me</span>
-                        &nbsp;
-                        <mark>☞</mark>
+                        <a href="/">
+                            <span>About me</span>
+                            &nbsp;
+                            <mark>☞</mark>
+                        </a>
                     </li>
                     {menuItems.map(mapMenu)}
                 </ul>
