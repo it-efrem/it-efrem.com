@@ -15,14 +15,17 @@ export default class MyApp extends App {
         return (
             <>
                 <Head>
-                    {/*//ToDo: import icons*/}
-                    {/*<link rel="image_src" href=".png"/>*/}
-                    {/*<meta property="og:image" content=".png"/>*/}
-                    {/*<link rel="shortcut icon" href=".png"/>*/}
-                    {/*<link rel="icon" href=".png"/>*/}
-                    {/*<link rel="shortcut icon" href=".png" type="image/png"/>*/}
-                    <script src="https://kit.fontawesome.com/321ff4e708.js" crossOrigin="anonymous"></script>
+                    <link rel="image_src" href="/static/favicon.png"/>
+                    <meta property="og:image" content="/static/favicon.png"/>
+                    <link rel="shortcut icon" href="/static/favicon.png"/>
+                    <link rel="icon" href="/static/favicon.png"/>
+                    <link rel="shortcut icon" href="/static/favicon.png" type="image/png"/>
+
                     <link type='text/css' href='../static/fonts/roboto/roboto.css'/>
+                    <link href='/static/fonts/fontawesome-free-5.12.0-web/css/fontawesome.min.css' rel="stylesheet"/>
+                    <link href='/static/fonts/fontawesome-free-5.12.0-web/css/brands.min.css' rel="stylesheet"/>
+                    <link href='/static/fonts/fontawesome-free-5.12.0-web/css/regular.min.css' rel="stylesheet"/>
+                    <link href='/static/fonts/fontawesome-free-5.12.0-web/css/solid.min.css' rel="stylesheet"/>
                 </Head>
                 <PageContent>
                     <Header/>
