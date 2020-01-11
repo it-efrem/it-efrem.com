@@ -84,7 +84,7 @@ export default function IndexPage() {
                                             <div className='btn' onClick={() => setContactsIsVisible(true)}>
                                                 <i className="far fa-envelope"/>
                                                 &nbsp;
-                                                <span>View contacts</span>
+                                                <span>Click to email</span>
                                             </div>
                                         </div>
                                         :
@@ -92,7 +92,9 @@ export default function IndexPage() {
                                             <div className='myContacts_row'>
                                                 <i className="far fa-envelope"/>
                                                 &nbsp;
-                                                <span>{contacts.getEmail}</span>
+                                                <span>
+                                                    <a href={`mailto:${contacts.getEmail}`}>{contacts.getEmail}</a>
+                                                </span>
                                             </div>
                                         </div>
                                 }

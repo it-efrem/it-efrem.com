@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <footer>
             <div>
-                <span className='label'>My location:</span>
+                <div className='label'>My location:</div>
                 <ul>
                     <li>
                         <i className="fas fa-globe-americas"/>

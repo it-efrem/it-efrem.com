@@ -1,5 +1,14 @@
 @import "../variables";
 
+a {
+  color: #2196F3;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid #2196F3;
+  }
+}
+
 .btn {
   cursor: pointer;
   padding: 0.5em 1em;
@@ -145,6 +154,14 @@
         display: inline-block;
         text-align: center;
       }
+
+      a {
+        color: $light;
+
+        &:hover {
+          border-color: $light;
+        }
+      }
     }
 
     &_data {
@@ -174,15 +191,6 @@
   }
 
   .experience {
-    a {
-      color: #2196F3;
-      border-bottom: 1px solid transparent;
-
-      &:hover {
-        border-bottom: 1px solid #2196F3;
-      }
-    }
-
     &_item {
       display: flex;
       flex-direction: row;

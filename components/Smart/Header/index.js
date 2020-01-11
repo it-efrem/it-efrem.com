@@ -84,7 +84,7 @@ const menuItems = [
     {
         icon: 'fas fa-hospital-symbol',
         label: 'Habr',
-        path: 'https://habr.com/ru/users/it-efrem/posts/'
+        link: 'https://habr.com/ru/users/it-efrem/posts/'
     },
     {
         icon: 'fas fa-graduation-cap',
