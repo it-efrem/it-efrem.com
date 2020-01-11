@@ -1,18 +1,38 @@
+const withPlugins = require('next-compose-plugins');
 const withSourceMaps = require('@zeit/next-source-maps');
-const withSass = require('@zeit/next-sass');
-const withCSS = require('@zeit/next-css');
+const sass = require('@zeit/next-sass');
 
-let config = {
+//ToDo: add plugin for clear /build before run build script
+let nextConfig = {
+    distDir: 'build',
     webpack: (config, {buildId, dev, isServer, defaultLoaders, webpack}) => {
-        return config;
+        config.module.rules.push({
+            test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+            use: {
+                loader: 'file-loader',
+                options: {
+                    esModule: false,
+                    name: '[hash].[ext]',
+                    outputPath: 'static/files',
+                }
+            }
+        });
+        return config
     },
     webpackDevMiddleware: config => {
         return config;
     },
-}
+};
 
-module.exports = withSourceMaps(
-    withSass(
-        withCSS(config)
-    )
+const sassConfig = [sass, {
+    cssModules: false,
+    cssLoaderOptions: {
+        localIdentName: '[local]___[hash:base64:5]',
+    },
+}];
+
+module.exports = withPlugins(
+    sassConfig,
+    nextConfig,
+    withSourceMaps,
 );
