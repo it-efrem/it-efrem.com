@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import Link from 'next/link';
 import {NavLink} from '../../Dumb/Link/index';
 import classNames from 'classnames'
 import './style.scss'
@@ -28,11 +29,13 @@ export default function Header() {
             <nav>
                 <ul>
                     <li>
-                        <a href="/">
-                            <span>About me</span>
-                            &nbsp;
-                            <mark>☞</mark>
-                        </a>
+                        <Link href='/'>
+                            <a>
+                                <span>About me</span>
+                                &nbsp;
+                                <mark>☞</mark>
+                            </a>
+                        </Link>
                     </li>
                     {menuItems.map(mapMenu)}
                 </ul>
