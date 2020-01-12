@@ -38,7 +38,7 @@ export const links = [
         title: 'Static module bundler for modern JavaScript applications',
     },
     {
-        link: 'https://react.com/',
+        link: 'https://reactjs.org/',
         title: 'A JavaScript library for building user interfaces',
     },
     {
