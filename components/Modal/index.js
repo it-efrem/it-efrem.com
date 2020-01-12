@@ -3,7 +3,7 @@
 import React, {useState, useEffect, useRef} from 'react'
 import ReactDOM from 'react-dom';
 import classNames from 'classnames'
-import './style.scss';
+import CSS from './style.scss';
 
 export function Modal({children, closeModal}) {
     const containerRef = useRef(null);
@@ -26,11 +26,11 @@ export function Modal({children, closeModal}) {
     if (process.browser) {
         return ReactDOM.createPortal(
             <div className={classNames(
-                'Modal',
-                {'Modal_hidden': !isVisible}
+                CSS.Modal,
+                {[CSS.Modal_hidden]: !isVisible}
             )}>
                 <div ref={containerRef}
-                     className='Modal_container'>
+                     className={CSS.Modal_container}>
                     {children}
                 </div>
             </div>,

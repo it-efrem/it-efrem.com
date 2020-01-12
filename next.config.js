@@ -1,3 +1,4 @@
+const {PHASE_PRODUCTION_BUILD, PHASE_EXPORT} = require('next-server/constants');
 const nextBuildId = require('next-build-id');
 
 const nextComposePlugins = require('next-compose-plugins');
@@ -15,7 +16,7 @@ let nextConfig = {
                 options: {
                     fallback: require.resolve('url-loader'),
                     esModule: true,
-                    name: `[hash].[ext]`,
+                    name: (PHASE_PRODUCTION_BUILD + PHASE_EXPORT) ? '[hash:base64].[ext]' : '[path]__[name].[ext]',
                     outputPath: `static/files`,
                 }
             }
@@ -28,15 +29,23 @@ let nextConfig = {
     },
 };
 
-const sassConfig = [nextSass, {
-    cssModules: false,
-    cssLoaderOptions: {
-        localIdentName: '[local]___[hash:base64:5]',
-    },
-}];
+const sassConfig = [
+    nextSass, {
+        cssModules: true,
+        cssLoaderOptions: {
+            importLoaders: 1,
+            localIdentName: '[path]___[local]',
+        },
+        [PHASE_PRODUCTION_BUILD + PHASE_EXPORT]: {
+            cssLoaderOptions: {
+                localIdentName: '[hash:base64]',
+            },
+        }
+    }];
 
-module.exports = nextComposePlugins(
-    sassConfig,
-    nextConfig,
-    nextSourceMaps,
+module.exports = nextComposePlugins([
+        sassConfig,
+        nextSourceMaps,
+    ],
+    nextConfig
 );

@@ -1,13 +1,13 @@
 'use strict';
 
 import React, {Component} from 'react';
-import './style.scss';
+import CSS from './style.scss';
 
 export default function PageContent({children}) {
     return (
         <React.StrictMode>
             <ErrorBoundary>
-                <section className='PageContent'>
+                <section className={CSS.PageContent}>
                     {children}
                 </section>
             </ErrorBoundary>

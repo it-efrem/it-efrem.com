@@ -1,8 +1,8 @@
 'use strict';
 
 import React, {useState} from 'react';
-import moment from 'moment'
-import './style.scss'
+import moment from 'moment';
+import CSS from './style.scss';
 
 import {contacts} from "../../static/data/contacts";
 
@@ -12,7 +12,7 @@ export default function Footer() {
     return (
         <footer>
             <div>
-                <div className='label'>My location:</div>
+                <div className={CSS.label}>My location:</div>
                 <ul>
                     <li>
                         <i className="fas fa-globe-americas"/>
@@ -44,13 +44,13 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
-            <div className='copyright'>
-                <div className='copyright_email'>
+            <div className={CSS.copyright}>
+                <div className={CSS.copyright_email}>
                     <mark>📧</mark>
                     &nbsp;
                     {
                         !contactsIsVisible ?
-                            <span className='link' onClick={() => setContactsIsVisible(true)}>
+                            <span className={CSS.link} onClick={() => setContactsIsVisible(true)}>
                                 click to email
                             </span>
                             :

@@ -2,9 +2,10 @@
 
 import React, {useEffect, useState} from 'react';
 import Link from 'next/link';
-import {NavLink} from '../Link/index';
+import {NavLink} from '../NavLink/index';
 import classNames from 'classnames';
-import './style.scss'
+import CSS from './style.scss'
+
 import {menuItems} from "../../static/data/menuItems";
 import {detectScroll} from "../../hooks/detectScroll";
 
@@ -13,7 +14,7 @@ export default function Header() {
 
     return (
         <header className={classNames({
-            'header_scroll': isScroll
+            [CSS.header_scroll]: isScroll
         })}>
             <nav>
                 <ul>

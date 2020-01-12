@@ -3,7 +3,8 @@
 import React, {useState} from 'react';
 import Head from 'next/head';
 import {certificates} from '../../static/data/certificates'
-import './style.scss';
+import CSS from './style.scss';
+import CSS_global from '../style.scss';
 
 import {Modal} from "../../components/Modal";
 
@@ -18,12 +19,12 @@ export default function Certificates() {
             <Head>
                 <title>Eugene Efremov - My Certificates | it-efrem.com</title>
             </Head>
-            <article className='Certificates'>
+            <article className={CSS.Certificates}>
                 <h1>
                     <mark>💡</mark>
                     <span>My Certificates</span>
                 </h1>
-                <ul className='shadow-block'>
+                <ul className={CSS_global.shadow_block}>
                     {certificates.map(certificatesMap)}
                 </ul>
             </article>
@@ -49,7 +50,7 @@ export default function Certificates() {
 
         return (
             <Modal closeModal={() => setModalFullPicture(false)}>
-                <div className='Certificates_Modal'>
+                <div className={CSS.Certificates_Modal}>
                     <div>
                         <p>{organization}</p>
                         <p>{title}</p>

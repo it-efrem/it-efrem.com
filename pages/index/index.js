@@ -3,11 +3,14 @@
 import React, {useState} from 'react';
 import Head from 'next/head';
 import moment from 'moment';
+import classNames from 'classnames';
+
 import {getLastCommit} from "../../hooks/api/github/getLastCommit";
 import {workDuration} from "../../helpers/duration";
 import {AboutMe} from "../../components/AboutMe";
 import {contacts} from "../../static/data/contacts";
-import './style.scss'
+import CSS from './style.scss';
+import CSS_global from '../style.scss';
 
 import {SberTech} from "../../components/Experience/SberTech";
 import {MKB} from "../../components/Experience/MKB";
@@ -22,24 +25,24 @@ export default function IndexPage() {
             <Head>
                 <title>Eugene Efremov - My Experience | it-efrem.com</title>
             </Head>
-            <div className='IndexPage'>
-                <div className="main_container">
-                    <div className="main_layout">
+            <div className={CSS.IndexPage}>
+                <div className={CSS.main_container}>
+                    <div className={CSS.main_layout}>
                         <div>
-                            <div className="myPhoto"/>
-                            <div className="myContacts">
+                            <div className={CSS.myPhoto}/>
+                            <div className={CSS.myContacts}>
                                 {
                                     !contactsIsVisible ?
-                                        <div className='clickContacts'>
-                                            <div className='btn' onClick={() => setContactsIsVisible(true)}>
+                                        <div className={CSS.clickContacts}>
+                                            <div className={CSS_global.btn} onClick={() => setContactsIsVisible(true)}>
                                                 <i className="far fa-envelope"/>
                                                 &nbsp;
                                                 <span>Click to email</span>
                                             </div>
                                         </div>
                                         :
-                                        <div className='myContacts_data'>
-                                            <div className='myContacts_row'>
+                                        <div className={CSS.myContacts_data}>
+                                            <div className={CSS.myContacts_row}>
                                                 <i className="far fa-envelope"/>
                                                 &nbsp;
                                                 <span>
@@ -50,12 +53,12 @@ export default function IndexPage() {
                                 }
                             </div>
                         </div>
-                        <div className='main_layout_right'>
-                            <span className="mySpeciality">
+                        <div className={CSS.main_layout_right}>
+                            <span className={CSS.mySpeciality}>
                                 <mark>⚛</mark>
                                 React Developer
                             </span>
-                            <span className="myName">
+                            <span className={CSS.myName}>
                                 <mark>🔥</mark>
                                 Eugene Efremov
                             </span>
@@ -63,35 +66,35 @@ export default function IndexPage() {
                     </div>
                 </div>
                 <article>
-                    <div className="IndexPage_container">
-                        <div className='IndexPage_block'>
+                    <div className={CSS.IndexPage_container}>
+                        <div className={CSS.IndexPage_block}>
                             <h2>
                                 <mark>⚡</mark>
                                 <span>Experience {getWorkExperience()}</span>
                             </h2>
-                            <div className='lastUpdateDate'>
+                            <div className={CSS.lastUpdateDate}>
                                 <i className="fas fa-magic"/>
                                 &nbsp;
                                 <span title="Auto update">Last update from the GitHub — {lastCommit}</span>
                             </div>
-                            <div className='experience'>
+                            <div className={CSS.experience}>
                                 <ul>
                                     {experience.map(mapExperience)}
                                 </ul>
                             </div>
                         </div>
-                        <div className='IndexPage_block'>
+                        <div className={CSS.IndexPage_block}>
                             <h2>
                                 <mark>🔨</mark>
                                 <span>Skills</span>
                             </h2>
-                            <div className='skills'>
+                            <div className={CSS.skills}>
                                 <ul>
                                     {skills.map(mapSkills)}
                                 </ul>
                             </div>
                         </div>
-                        <div className='IndexPage_block'>
+                        <div className={CSS.IndexPage_block}>
                             <h2>
                                 <mark>👽</mark>
                                 <span>About me</span>
@@ -123,25 +126,27 @@ function mapSkills(label, idx) {
 function mapExperience(item, idx) {
     return (
         <li key={idx}>
-            <div className='experience_item shadow-block'>
-                <div className='experience_item_dates'>
-                    <div className='experience_item_datePeriod'>
+            <div className={classNames(
+                [CSS.experience_item, CSS_global.shadow_block]
+            )}>
+                <div className={CSS.experience_item_dates}>
+                    <div className={CSS.experience_item_datePeriod}>
                         <span>{moment(item.date_from).format('MMM YYYY')}</span>
                         <span>&nbsp;—&nbsp;</span>
                         <span>{moment(item.date_to).format('MMM YYYY')}</span>
                     </div>
-                    <div className='experience_item_workDuration'>
+                    <div className={CSS.experience_item_workDuration}>
                         <span>{workDuration({...item})}</span>
                     </div>
                 </div>
                 <div>
-                    <div className='experience_item_company'>
+                    <div className={CSS.experience_item_company}>
                         <div>{item.company.name}</div>
                         <div>
                             <a href={item.company.site_link} target='_blank'>{item.company.site_name}</a>
                         </div>
                     </div>
-                    <div className='shadow-block_text'>
+                    <div className={CSS_global.shadow_block_text}>
                         {item.component}
                     </div>
                 </div>

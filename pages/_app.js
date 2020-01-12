@@ -1,13 +1,12 @@
 'use strict';
 
-import App from 'next/app'
-import React from 'react'
+import App from 'next/app';
+import React from 'react';
 import Head from 'next/head';
 import 'core-js/es6/string';
-import './reset.scss';
 import './style.scss';
 
-import '../static/data/ym'
+import '../static/data/ym';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageContent from "../components/PageContent";
