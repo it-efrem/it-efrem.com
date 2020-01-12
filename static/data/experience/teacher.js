@@ -2,8 +2,8 @@
 
 export const iHaveDone = [
     'For 1.5 years I spent >200 lessons on Skype',
-    'I recorded about 80\'s of his own video lectures -> https://www.youtube.com/c/code_robots',
-    'They have been watched >550,000 times',
+    'I recorded about 80\'s of his own video lectures -> <a href="https://www.youtube.com/c/code_robots" target="_blank">youtube.com/code_robots</a>',
+    'Over 550,000 views',
 ];
 export const tasks = [
     'Programming in JS, Java and C ++',

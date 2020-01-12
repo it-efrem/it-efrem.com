@@ -4,14 +4,22 @@ import React from 'react';
 import {List} from "./List/index";
 import CSS from '../../pages/style.scss';
 
-import {seniorEngineer, engineer, aboutProject, tasks} from "../../static/data/experience/sberTech";
+import {leadEngineer, seniorEngineer, engineer, aboutProject, tasks} from "../../static/data/experience/sberTech";
 
 export function SberTech() {
     return (
         <div>
             <p>
                 <span className={CSS.shadow_block_text_label_big}>
-                    Jan 2019 - Jan 2020 (12 months) -> Senior engineer
+                    Nov 2019 - Jan 2020 (3 months) -> Lead engineer
+                </span>
+            </p>
+            <div className={CSS.shadow_block_text_label}>I have done this:</div>
+            <List data={leadEngineer}/>
+
+            <p>
+                <span className={CSS.shadow_block_text_label_big}>
+                    Jan 2019 - Nov 2019 (10 months) -> Senior engineer
                 </span>
             </p>
             <div className={CSS.shadow_block_text_label}>I have done this:</div>
