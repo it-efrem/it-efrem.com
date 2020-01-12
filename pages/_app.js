@@ -6,7 +6,6 @@ import Head from 'next/head';
 import 'core-js/es6/string';
 import './style.scss';
 
-import '../static/data/ym';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageContent from "../components/PageContent";
@@ -30,6 +29,8 @@ export default class MyApp extends App {
                     <link href='/static/fonts/fontawesome-free-5.12.0-web/css/brands.min.css' rel="stylesheet"/>
                     <link href='/static/fonts/fontawesome-free-5.12.0-web/css/regular.min.css' rel="stylesheet"/>
                     <link href='/static/fonts/fontawesome-free-5.12.0-web/css/solid.min.css' rel="stylesheet"/>
+
+                    <script src="/static/data/ym.js" async/>
                 </Head>
                 <PageContent>
                     <Header/>
