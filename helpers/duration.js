@@ -24,21 +24,21 @@ export function differenceBetweenDates(to, from) {
 }
 
 export function workDuration ({date_to, date_from}) {
-    let _result = [];
-    const _duration = differenceBetweenDates(
+    let result = [];
+    const duration = differenceBetweenDates(
         moment(date_to),
         moment(date_from)
     );
 
-    if (_duration.years) {
-        _result.push(`${_duration.years} years`);
+    if (duration.years) {
+        result.push(`${duration.years} years`);
     }
-    if (_duration.months) {
-        _result.push(`${_duration.months} months`);
+    if (duration.months) {
+        result.push(`${duration.months} months`);
     }
 
-    if (_result.length) {
-        return _result.join(' ');
+    if (result.length) {
+        return result.join(' ');
     } else {
         return null
     }

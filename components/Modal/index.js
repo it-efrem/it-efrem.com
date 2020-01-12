@@ -8,7 +8,7 @@ export function Modal({children, closeModal}) {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        setIsVisible(true)
+        setIsVisible(true);
 
         if (process.browser) {
             document.addEventListener('mousedown', handleClickOutside);
@@ -38,7 +38,6 @@ export function Modal({children, closeModal}) {
         return null
     }
 
-    //ToDo: it's the best practice?
     function close() {
         setTimeout(closeModal, 300);
         setIsVisible(false);

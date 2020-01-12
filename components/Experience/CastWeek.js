@@ -1,5 +1,5 @@
 import React from 'react';
-import {List} from "./index";
+import {List} from "./List/index";
 
 const iHaveDone = [
     'top secret',

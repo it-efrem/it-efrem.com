@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import Head from 'next/head';
+import {certificates} from '../../static/data/certificates'
 import './style.scss';
-import {certificates} from '../../static/data/myCertificates'
-import {Modal} from "../../components/Dumb/Modal";
+
+import {Modal} from "../../components/Modal";
 
 export default function Certificates() {
     const [modalFullPicture, setModalFullPicture] = useState(false);
@@ -31,7 +32,7 @@ export default function Certificates() {
         return (
             <li key={idx}>
                 <div onClick={() => setModalFullPicture({organization, title, imgFullPath})}>
-                    <img src={imgSmallPath} alt=""/>
+                    <img src={imgSmallPath} alt={title}/>
                 </div>
                 <div>
                     <h3>{organization}</h3>
@@ -51,7 +52,7 @@ export default function Certificates() {
                         <p>{organization}</p>
                         <p>{title}</p>
                     </div>
-                    <img src={imgFullPath} alt=""/>
+                    <img src={imgFullPath} alt={title}/>
                 </div>
             </Modal>
         )

@@ -1,7 +1,4 @@
-import React from 'react';
-import {List} from "./index";
-
-const seniorEngineer = [
+export const seniorEngineer = [
     'Rewrote the app from React 15 to React 16.10 (hooks)',
     [
         'See my universal hook library <a href="https://github.com/Evgeny-Bukovski/ReactHooksLibrary" target="_blank">here</a>',
@@ -19,7 +16,7 @@ const seniorEngineer = [
         'Wizard for complex forms',
     ],
 ];
-const engineer = [
+export const engineer = [
     'I move out part of the components in Dumb and more clearly divided the logic using HOC, minimized copy-paste',
     'I designed properly shared of data between state & store (atomic design)',
     'Stylized UI in Material Design Style',
@@ -33,40 +30,12 @@ const engineer = [
         'Made the modal window system global (via Redux), before that, it was just imported in the right place use <Modal .../>',
     ],
 ];
-const aboutProject = [
+export const aboutProject = [
     'The system for administering data replication of the entire bank to backup server clusters'
 ];
-const tasks = [
+export const tasks = [
     'Developed an interface that solves the tasks of monitoring and managing replication servers',
     'Active communication with users (administrators), understanding of their needs and work processes',
     'Development of new components using: React, Redux, Less, and refactoring existing ones',
     'Conducting Code Review',
 ];
-
-export function SberTech() {
-    return (
-        <div>
-            <p>
-                <span className='label_big'>Jan 2019 - Jan 2020 (12 months) -> Senior engineer</span>
-            </p>
-            <div className='label'>I have done this:</div>
-            <List data={seniorEngineer}/>
-
-            <p>
-                <span className='label_big'>June 2018 - Jan 2019 (6 months) -> Engineer</span>
-            </p>
-            <div className='label'>I have done this:</div>
-            <List data={engineer}/>
-
-            <p>
-                <span className='label'>About the project:</span>
-            </p>
-            <List data={aboutProject}/>
-
-            <p>
-                <span className='label'>My tasks:</span>
-            </p>
-            <List data={tasks}/>
-        </div>
-    )
-}

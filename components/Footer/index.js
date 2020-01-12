@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import moment from 'moment'
 import './style.scss'
-import {contacts} from "../../../helpers/contacts";
+
+import {contacts} from "../../static/data/contacts";
 
 export default function Footer() {
     const [contactsIsVisible, setContactsIsVisible] = useState(false);
@@ -52,7 +53,7 @@ export default function Footer() {
                             </span>
                             :
                             <span>
-                                <a href={`mailto:${contacts.getEmail}`}>{contacts.getEmail}</a>
+                                <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
                             </span>
                     }
                 </div>

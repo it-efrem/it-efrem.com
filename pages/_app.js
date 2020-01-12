@@ -5,9 +5,9 @@ import './reset.scss'
 import './style.scss'
 
 import '../static/data/ym'
-import Header from "../components/Smart/Header";
-import Footer from "../components/Smart/Footer";
-import PageContent from "../components/Smart/PageContent";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import PageContent from "../components/PageContent";
 
 export default class MyApp extends App {
     render() {

@@ -1,16 +1,16 @@
-import arch_practics from './small/arch_practics.png';
-import hrm from './small/hrm.png';
-import pm_in_it from './small/pm_in_it.png';
-import react_dev from './small/react_dev.png';
-import sber_thank from './small/sber_thank.png';
-import web_testing from './small/web_testing.jpeg';
+import arch_practics from '../../img/certificates/small/arch_practics.png';
+import hrm from '../../img/certificates/small/hrm.png';
+import pm_in_it from '../../img/certificates/small/pm_in_it.png';
+import react_dev from '../../img/certificates/small/react_dev.png';
+import sber_thank from '../../img/certificates/small/sber_thank.png';
+import web_testing from '../../img/certificates/small/web_testing.jpeg';
 
-import arch_practics_full from './full/arch_practics.jpg';
-import hrm_full from './full/hrm.jpg';
-import pm_in_it_full from './full/pm_in_it.jpg';
-import react_dev_full from './full/react_dev.jpg';
-import sber_thank_full from './full/sber_thank.jpg';
-import web_testing_full from './full/web_testing.jpg';
+import arch_practics_full from '../../img/certificates/full/arch_practics.jpg';
+import hrm_full from '../../img/certificates/full/hrm.jpg';
+import pm_in_it_full from '../../img/certificates/full/pm_in_it.jpg';
+import react_dev_full from '../../img/certificates/full/react_dev.jpg';
+import sber_thank_full from '../../img/certificates/full/sber_thank.jpg';
+import web_testing_full from '../../img/certificates/full/web_testing.jpg';
 
 //ToDo: Create nextjs bug issue
 function hotFixNextJsBug(url) {

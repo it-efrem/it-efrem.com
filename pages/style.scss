@@ -1,3 +1,5 @@
+@import "variables";
+
 body {
   min-height: 100vh;
   position: relative;
@@ -33,6 +35,39 @@ h1 {
 
   mark {
     font-size: 3.5em;
+  }
+}
+
+a {
+  color: #2196F3;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid #2196F3;
+  }
+}
+
+mark {
+  background-color: transparent;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  min-width: 1.5em;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  font-weight: bold;
+  transition: 0.25s;
+  background: $light;
+  color: black;
+
+  &:hover {
+    background: $yellow;
+    color: black;
+    transition: 0.25s;
   }
 }
 
@@ -95,12 +130,4 @@ h1 {
       }
     }
   }
-}
-
-mark {
-  background-color: transparent;
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
-  min-width: 1.5em;
-  display: inline-block;
-  text-align: center;
 }

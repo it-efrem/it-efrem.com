@@ -1,20 +1,7 @@
 import React from 'react';
-import {List} from "./index";
+import {List} from "./List/index";
 
-const iHaveDone = [
-    'For 1.5 years I spent >200 lessons on Skype',
-    'I recorded about 80\'s of his own video lectures -> https://www.youtube.com/c/code_robots',
-    'They have been watched >550,000 times',
-];
-const tasks = [
-    'Programming in JS, Java and C ++',
-    'Fundamentals of Higher Mathematics',
-    'Data structures',
-    'Algorithms',
-];
-const aboutProject = [
-    'I was developing the educational portal Code & Robots, whose goal was to bring together in one place newcomers and IT professionals'
-];
+import {iHaveDone, tasks, aboutProject} from "../../static/data/experience/teacher";
 
 export function Teacher() {
     return (
