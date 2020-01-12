@@ -5,8 +5,11 @@ import moment from 'moment'
 export function getLastCommit() {
     const [lastCommit, setLastCommit] = useState('Loading...');
 
+    useEffect(() => {
+        fetchData();
+    }, []);
 
-    useEffect(async () => {
+    async function fetchData() {
         try {
             const response = await axios.get('https://api.github.com/repos/Evgeny-Bukovski/it-efrem.com/commits');
             setLastCommit(
@@ -15,7 +18,7 @@ export function getLastCommit() {
         } catch {
             setLastCommit('GitHub server is not available')
         }
-    }, []);
+    }
 
     function getLastCommitDate(commits) {
         if (commits) {
