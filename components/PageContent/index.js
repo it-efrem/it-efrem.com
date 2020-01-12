@@ -1,10 +1,14 @@
+'use strict';
+
 import React from 'react';
 import './style.scss';
 
 export default function PageContent({children}) {
     return (
-        <section className='PageContent'>
-            {children}
-        </section>
+        <React.StrictMode>
+            <section className='PageContent'>
+                {children}
+            </section>
+        </React.StrictMode>
     )
 }

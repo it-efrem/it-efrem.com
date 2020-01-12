@@ -1,3 +1,5 @@
+'use strict';
+
 export const name1 = [
     'I try every day to learn useful and new',
     'I manage my time using Google Calendar, Keep, Tasks',

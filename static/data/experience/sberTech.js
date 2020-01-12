@@ -1,3 +1,5 @@
+'use strict';
+
 export const seniorEngineer = [
     'Rewrote the app from React 15 to React 16.10 (hooks)',
     [

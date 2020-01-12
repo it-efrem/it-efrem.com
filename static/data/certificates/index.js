@@ -1,3 +1,5 @@
+'use strict';
+
 import arch_practics from '../../img/certificates/small/arch_practics.png';
 import hrm from '../../img/certificates/small/hrm.png';
 import pm_in_it from '../../img/certificates/small/pm_in_it.png';

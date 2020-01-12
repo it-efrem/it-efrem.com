@@ -1,3 +1,5 @@
+'use strict';
+
 import App from 'next/app'
 import React from 'react'
 import Head from 'next/head';
@@ -16,6 +18,8 @@ export default class MyApp extends App {
         return (
             <>
                 <Head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
                     <link rel="image_src" href="/static/favicon.png"/>
                     <meta property="og:image" content="/static/favicon.png"/>
                     <link rel="shortcut icon" href="/static/favicon.png"/>

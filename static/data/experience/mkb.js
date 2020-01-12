@@ -1,3 +1,5 @@
+'use strict';
+
 export const iHaveDone = [
     'Moved existing functionality from GWT to React.js'
 ];

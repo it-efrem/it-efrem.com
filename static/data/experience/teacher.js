@@ -1,3 +1,5 @@
+'use strict';
+
 export const iHaveDone = [
     'For 1.5 years I spent >200 lessons on Skype',
     'I recorded about 80\'s of his own video lectures -> https://www.youtube.com/c/code_robots',

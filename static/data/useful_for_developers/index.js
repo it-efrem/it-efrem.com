@@ -1,3 +1,5 @@
+'use strict';
+
 export const links = [
     {
         link: 'https://learn-html.org/',

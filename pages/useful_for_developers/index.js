@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react';
 import Head from 'next/head';
 import {links} from "../../static/data/useful_for_developers";

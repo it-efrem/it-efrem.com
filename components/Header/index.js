@@ -1,3 +1,5 @@
+'use strict';
+
 import React, {useEffect, useState} from 'react';
 import Link from 'next/link';
 import {NavLink} from '../Link/index';

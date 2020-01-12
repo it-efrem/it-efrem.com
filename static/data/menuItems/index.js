@@ -1,3 +1,5 @@
+'use strict';
+
 export const menuItems = [
     {
         icon: 'fas fa-vial',
