@@ -16,7 +16,7 @@ let nextConfig = {
                     fallback: require.resolve('url-loader'),
                     esModule: true,
                     name: `[hash].[ext]`,
-                    outputPath: `static/${buildId}/files`,
+                    outputPath: `static/files`,
                 }
             }
         });
