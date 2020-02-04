@@ -2,7 +2,7 @@
 
 import React, {useState} from 'react';
 
-export default function ReactFunctionVsClass() {
+export function ReactFunctionVsClass() {
     return (
         <>
             <FunctionalComponent/>

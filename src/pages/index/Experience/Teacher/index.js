@@ -6,7 +6,7 @@ import CSS from '../../../style.scss';
 
 import {iHaveDone, tasks, aboutProject} from "./data";
 
-export function Index() {
+export function Teacher() {
     return (
         <div>
             <p>

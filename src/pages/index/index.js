@@ -12,9 +12,9 @@ import {contacts} from "../../common/data/contacts";
 import CSS from './style.scss';
 import CSS_global from '../style.scss';
 
-import {Index} from "./Experience/SberTech/index";
-import {Index} from "./Experience/MKB/index";
-import {Index} from "./Experience/Teacher/index";
+import {SberTech} from "./Experience/SberTech";
+import {MKB} from "./Experience/MKB";
+import {Teacher} from "./Experience/Teacher";
 
 export default function IndexPage() {
     const [contactsIsVisible, setContactsIsVisible] = useState(false);
@@ -165,7 +165,7 @@ const experience = [
             site_name: ' sber-tech.com',
             site_link: ' http://sber-tech.com/',
         },
-        component: <Index/>,
+        component: <SberTech/>,
     },
     {
         date_from: +moment('01.2018', 'MM.YYYY').format('x'),
@@ -176,7 +176,7 @@ const experience = [
             site_name: 'mkb.ru',
             site_link: ' http://www.mkb.ru/',
         },
-        component: <Index/>,
+        component: <MKB/>,
     },
     {
         date_from: +moment('05.2016', 'MM.YYYY').format('x'),
@@ -185,7 +185,7 @@ const experience = [
         company: {
             name: 'Programming teacher',
         },
-        component: <Index/>,
+        component: <Teacher/>,
     }
 ];
 
