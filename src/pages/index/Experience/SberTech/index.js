@@ -6,7 +6,7 @@ import CSS from '../../../style.scss';
 
 import {leadEngineer, seniorEngineer, engineer, aboutProject, tasks} from "./data";
 
-export function Index() {
+export function SberTech() {
     return (
         <div>
             <p>

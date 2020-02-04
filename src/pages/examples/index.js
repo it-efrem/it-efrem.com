@@ -1,14 +1,16 @@
 'use strict';
 
-import React from 'react';
+import React, {useState} from 'react';
 import {exampleList} from "./data";
 
 export default function ExamplesPage() {
+    const [value, setValue] = useState(1);
+
     return (
         <article>
-            <h1>
+            <h1 onClick={() => setValue(value + 1)}>
                 <mark>💎</mark>
-                <span>Examples</span>
+                <span>Examples {value}</span>
             </h1>
             <ul>
                 {
@@ -19,11 +21,11 @@ export default function ExamplesPage() {
     )
 }
 
-function ExampleItem({description, component}, idx) {
+function ExampleItem({description, Component}, idx) {
     return (
         <li key={idx}>
             <div>
-                {component()}
+                <Component/>
             </div>
             <div>
                 {description}
