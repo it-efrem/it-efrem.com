@@ -7,7 +7,7 @@
     "clean": "rm -rf build && rm -rf .next",
     "dev": "cross-env NODE_ENV=development next dev",
     "build": "npm run clean && cross-env NODE_ENV=production next build",
-    "start:prod": "cross-env NODE_ENV=production next start --port 1000"
+    "start:prod": "cross-env NODE_ENV=production next start --port 2000"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
