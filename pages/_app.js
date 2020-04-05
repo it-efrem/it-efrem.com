@@ -3,7 +3,7 @@
 import App from 'next/app';
 import React from 'react';
 import Head from 'next/head';
-import 'core-js/es6/string';
+import 'core-js/es/string';
 import './style.scss';
 
 import Header from "../components/Header";
