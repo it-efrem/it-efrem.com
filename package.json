@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf build && rm -rf .next",
-    "dev": "cross-env NODE_ENV=development next dev",
-    "build": "npm run clean && cross-env NODE_ENV=production next build",
+    "build": "cross-env NODE_ENV=production next build",
+    "start:dev": "cross-env NODE_ENV=development next dev",
     "start:prod": "cross-env NODE_ENV=production next start --port 8080"
   },
   "dependencies": {
