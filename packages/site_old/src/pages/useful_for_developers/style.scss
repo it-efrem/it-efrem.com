@@ -1,0 +1,58 @@
+@import "src/pages/variables";
+
+.UsefulForDevelopers {
+  ul {
+    width: 47em;
+    li {
+      margin-bottom: 0.7em;
+
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        left: 0.5em;
+        border-bottom: 0.2em solid rgba(136, 133, 187, 0.5);
+        width: 0%;
+        transition: 0.7s;
+      }
+
+      &:hover {
+        &::after {
+          width: calc(100% - 0.5em);
+          transition: 0.7s;
+        }
+      }
+
+      a {
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+        display: flex;
+        color: black;
+        border: 0 transparent;
+
+        &:visited {
+          color: #8885bb;
+        }
+
+        span {
+          display: block;
+          flex-grow: 1;
+          width: 100%;
+          box-sizing: border-box;
+
+          &:nth-child(1) {
+            flex-wrap: nowrap;
+            width: 50%;
+            text-align: right;
+            font-weight: bold;
+          }
+
+          &:nth-child(2) {
+            width: 1em;
+            margin: 0 1em;
+          }
+        }
+      }
+    }
+  }
+}
