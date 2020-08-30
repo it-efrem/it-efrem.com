@@ -1,0 +1,209 @@
+@import "src/pages/variables";
+
+.IndexPage {
+  .link {
+    &:hover {
+      border-color: white;
+    }
+  }
+
+  &_container {
+    width: 47em;
+    max-width: 47em;
+  }
+
+  &_block {
+    margin: 0.4em 0;
+    padding: 0.4em 0;
+  }
+
+  .main {
+    &_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 40em;
+      background: $main-container_color;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    &_layout {
+      position: relative;
+      min-width: 70em;
+      display: flex;
+      flex-direction: row;
+
+      &_right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 8em;
+        margin-left: 5em;
+        color: white;
+
+        > span {
+          &:nth-child(1) {
+            @include text-shadow-line($text-shadow_color_1);
+          }
+          &:nth-child(2) {
+            @include text-shadow-line($text-shadow_color_2);
+          }
+          &:nth-child(3) {
+            @include text-shadow-line($text-shadow_color_3);
+          }
+        }
+      }
+    }
+  }
+
+  .mySpeciality {
+    font-size: 5em;
+    font-weight: bold;
+  }
+
+  .myName {
+    font-size: 5em;
+  }
+
+  .myPhoto {
+    position: relative;
+    width: 18em;
+    height: 18em;
+    min-width: 18em;
+    min-height: 18em;
+    background: url(/img/i.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform-style: preserve-3d;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10%;
+      left: -15%;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 65%);
+      transform: translateZ(-1px);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 5%;
+      left: 4%;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      border: 0.4em solid rgba(255, 255, 255, 0.9);
+      transform: translateZ(-1px);
+      box-shadow: inset 0 0 12px 0 rgba(255, 255, 255, 0.5), 5px 10px 0px 0 rgb(108, 103, 202);
+    }
+  }
+
+  .myContacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2.4em;
+    min-height: 2.4em;
+    margin-top: 2em;
+    color: $light;
+    font-weight: bold;
+
+    &_row {
+      min-width: 4em;
+      line-height: 1.4em;
+
+      i {
+        min-width: 1.5em;
+        display: inline-block;
+        text-align: center;
+      }
+
+      a {
+        color: $light;
+
+        &:hover {
+          border-color: $light;
+        }
+      }
+    }
+
+    &_data {
+      i {
+        color: $yellow;
+      }
+    }
+
+    .clickContacts {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .skills {
+    ul {
+      li {
+        display: inline-flex;
+        margin: 0.25em;
+        padding: 0.6em 0.8em;
+        background: #eff1f2;
+        color: #666666;
+        border-radius: 0.2em;
+      }
+    }
+  }
+
+  .experience {
+    &_item {
+      display: flex;
+      flex-direction: row;
+
+      &_dates {
+        min-width: max-content;
+        margin-right: 1.5em;
+      }
+
+      &_datePeriod {
+
+      }
+
+      &_workDuration {
+        font-size: 0.9em;
+        margin-top: 0.6em;
+        color: #969696;
+      }
+
+      &_company {
+        margin-bottom: 1.5em;
+
+        div {
+          &:first-child {
+            font-size: 1.25em;
+            font-weight: bold;
+            margin-bottom: 0.3em;
+          }
+          &:last-child {
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+  }
+
+  .lastUpdateDate {
+    font-size: 0.7em;
+    color: #4c4c4c;
+    margin-left: 0.4em;
+  }
+}

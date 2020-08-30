@@ -1,0 +1,26 @@
+@import "src/pages/variables";
+
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+
+  &_hidden {
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  &_container {
+    background: $light;
+    padding: 1em;
+    border-radius: 0.25em;
+  }
+}
