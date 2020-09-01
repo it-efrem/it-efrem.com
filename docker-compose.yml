@@ -1,12 +1,16 @@
-version '3.8':
-  services:
-    #   api:
-    #     build: packages/api
-    site:
-      build: packages/site/
-      depends_on:
-        - api
-#   storybook:
-#     build: packages/storybook
-#     depends_on:
-#       - api
+# ToDo: How view container ip after build?
+
+version: '3.8'
+services:
+# api:
+#   build: packages/api
+  site:
+    build:
+      context: ./
+      dockerfile: ./packages/site/Dockerfile
+#    depends_on:
+#      - api
+# storybook:
+#   build: packages/storybook
+#   depends_on:
+#     - api
