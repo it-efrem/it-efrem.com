@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "Eugene <github@it-efrem.com>",
   "scripts": {
-    "start:dev": "cross-env MODE=development webpack-dev-server --no-inline --hot",
+    "start:dev": "cross-env MODE=development webpack-dev-server --host 0.0.0.0 --no-inline --hot",
     "start:prod": "cross-env MODE=production webpack"
   },
   "dependencies": {
