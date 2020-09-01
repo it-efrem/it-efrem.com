@@ -8,3 +8,8 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById('root')
 );
+
+// ToDo: Config docker
+// ToDo: up on VPS
+// ToDo: config to deploy
+// ToDo: config DNS
