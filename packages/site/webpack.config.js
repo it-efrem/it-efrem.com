@@ -9,7 +9,7 @@ if (MODE === 'development') {
     module.exports = {
         ...devConfig(DIR_SRC, DIR_BUILD),
         devServer: {
-            host: 'localhost',
+            host: '0.0.0.0',
             port: 3000,
             historyApiFallback: true,
         },
