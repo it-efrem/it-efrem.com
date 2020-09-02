@@ -1,20 +1,13 @@
 name: Deploy
-
-on: [push]
-
+on:
+  push:
+    branches: 
+      - master
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-
-    - name: Executing remote command
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSHKEY }}
-        script: ls
+      - name: "Connect to server"
+        run: "ssh -i ${{ secrets.SSHKEY }} ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.PORT }}"
+      - name:  "ls"
+        run: ls
