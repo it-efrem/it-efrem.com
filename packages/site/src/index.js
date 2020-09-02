@@ -4,6 +4,7 @@ import {Test} from "@it-efrem/storybook/test";
 
 ReactDOM.render(
     <React.StrictMode>
+        <div>123123</div>
         <Test/>
     </React.StrictMode>,
     document.getElementById('root')
