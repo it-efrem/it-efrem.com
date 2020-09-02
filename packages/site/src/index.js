@@ -1,11 +1,10 @@
 import ReactDOM from "react-dom";
 import React from "react";
-import {Test} from "@it-efrem/storybook/test";
 
 ReactDOM.render(
     <React.StrictMode>
         <div>
-            Dicker deploy is work!
+            Docker deploy is work!
         </div>
     </React.StrictMode>,
     document.getElementById('root')
@@ -14,5 +13,7 @@ ReactDOM.render(
 // ++ ToDo: Config docker
 // ++ ToDo: up on VPS
 // ++ ToDo: config to deploy
-// ToDo: config DNS
+// ++ ToDo: config DNS
 // ToDo: how right run rebuild in error case?
+// ToDo: Create develop deploy
+// ToDo: config NGINX

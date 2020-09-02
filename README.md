@@ -6,7 +6,9 @@
   ToDo: Description
 </p>
 
+
+![Deploy result](https://github.com/it-efrem/it-efrem.com/workflows/Deploy/badge.svg)
+ToDo: Linter Status
 ToDo: NPM Status
-ToDo: GitHub CI
 
 ## ToDo: Links to StoryBook
