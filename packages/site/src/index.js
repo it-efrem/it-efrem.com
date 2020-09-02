@@ -11,7 +11,8 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-// ToDo: Config docker
-// ToDo: up on VPS
-// ToDo: config to deploy
+// ++ ToDo: Config docker
+// ++ ToDo: up on VPS
+// ++ ToDo: config to deploy
 // ToDo: config DNS
+// ToDo: how right run rebuild in error case?
