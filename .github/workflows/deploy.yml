@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Connect to server"
-        run: "ssh -i ${{ secrets.SSHKEY }} ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.PORT }}"
+        run: "ssh -i /settings/secrets/SSHKEY ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.PORT }}"
       - name:  "ls"
         run: ls
