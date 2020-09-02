@@ -7,6 +7,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name:  "ls"
+        run: ls
       - name: "Connect to server"
         run: "ssh -i /settings/secrets/SSHKEY ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.PORT }}"
       - name:  "ls"
