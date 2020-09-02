@@ -5,8 +5,7 @@ import {Test} from "@it-efrem/storybook/test";
 ReactDOM.render(
     <React.StrictMode>
         <div>
-            <div>123123</div>
-            <Test/>
+            Dicker deploy is work!
         </div>
     </React.StrictMode>,
     document.getElementById('root')
