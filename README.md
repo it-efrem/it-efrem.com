@@ -1,8 +1,12 @@
+<p align="center">
+  ToDo: IMG-text "it-efrem.com"
+</p>
 
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+<p align="center">
+  ToDo: Description
+</p>
 
-#### Get container IP
-docker inspect --format '{{ .NetworkSettings.IPAddress }}' container_id
+ToDo: NPM Status
+ToDo: GitHub CI
 
-#### Get in web browser
-container_id:port
+## ToDo: Links to StoryBook

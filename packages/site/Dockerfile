@@ -14,5 +14,4 @@ RUN npm i -g yarn --force
 RUN yarn install
 
 # ToDo: docker self restart?
-EXPOSE 3000
 CMD npm run start:dev
