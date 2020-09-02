@@ -1,20 +1,23 @@
 name: Deploy
 on:
   push:
-    branches: 
+    branches:
       - master
 jobs:
-  deply_prod:
+  deploy_prod:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: "Run ssh commands"
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSHKEY }}
-        script: |
-          cd ${{ secrets.WORKDIR }}
-          docker-compose up --build --force-recreate --no-deps -d
+      - uses: actions/checkout@v1
+      - name: "Run ssh commands"
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSHKEY }}
+          script: |
+            cd ${{ secrets.WORKDIR }}
+            git reset --hard HEAD
+            git checkout master
+            git pull
+            docker-compose up --build --force-recreate --no-deps -d
