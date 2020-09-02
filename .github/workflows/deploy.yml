@@ -7,9 +7,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name:  "ls"
-        run: ls
-      - name: "Connect to server"
-        run: "ssh -i /settings/secrets/SSHKEY ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.PORT }}"
-      - name:  "ls"
-        run: ls
+    - uses: actions/checkout@v1
+    - name: Git Pull
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.SSHKEY }}
+        script: |
+          cd git/it-efrem.com \
+          sudo docker-compose up --build --force-recreate --no-deps -d
