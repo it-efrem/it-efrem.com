@@ -16,5 +16,5 @@ jobs:
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
         script: |
-          cd git/it-efrem.com
-          ls
+          cd ${{ secrets.WORKDIR }}
+          docker-compose up --build --force-recreate --no-deps -d
