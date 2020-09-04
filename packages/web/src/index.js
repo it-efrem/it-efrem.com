@@ -3,9 +3,12 @@ import React from "react";
 
 ReactDOM.render(
     <React.StrictMode>
-        <div>
-            Docker deploy is work!
-        </div>
+        <p>
+            Site is being developed
+        </p>
+        <p>
+            Write to telegram: it_efrem
+        </p>
     </React.StrictMode>,
     document.getElementById('root')
 );
@@ -18,7 +21,7 @@ ReactDOM.render(
 // ToDo: how right run rebuild in error case?
 // ToDo: run production build in containers
 
-// ToDo: config NGINX
+// ++ ToDo: config NGINX
 //        api.it-efrem.com   -   2999
 //            it-efrem.com   -   3000
 //  storybook.it-efrem.com   -   3001
