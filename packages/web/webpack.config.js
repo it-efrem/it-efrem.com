@@ -12,6 +12,7 @@ if (MODE === 'development') {
             host: '0.0.0.0',
             port: 3000,
             historyApiFallback: true,
+            disableHostCheck: true, // remove it after move to start:prod in Dockerfile
         },
     };
 }

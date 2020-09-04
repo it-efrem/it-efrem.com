@@ -9,7 +9,7 @@
     "packages/*"
   ],
   "scripts": {
-    "site:dev": "lerna run --scope @it-efrem/site start:dev --stream"
+    "web:dev": "lerna run --scope @it-efrem/web start:dev --stream"
   },
   "devDependencies": {
     "lerna": "^3.22.1"

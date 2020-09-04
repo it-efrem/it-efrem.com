@@ -3,15 +3,15 @@ FROM node:12
 WORKDIR /usr/src/app/
 
 COPY config/ config/
-COPY packages/site packages/site/
+COPY packages/web packages/web/
 # ToDo: How copy only files?
 COPY ./ ./
 
-WORKDIR /usr/src/app/packages/site/
+WORKDIR /usr/src/app/packages/web/
 
 # ToDo: using --force is correctly?
 RUN npm i -g yarn --force && \
-    yarn install
+    yarn
 
-# ToDo: docker self restart?
+# ToDo: change to start:prod (+ build)
 CMD npm run start:dev
