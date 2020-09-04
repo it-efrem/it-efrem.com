@@ -13,4 +13,4 @@ WORKDIR /usr/src/app/packages/web/
 RUN npm i -g yarn --force && \
     yarn && \
     npm run build && \
-    cp -r /usr/src/app/packages/ ~/packages
+#    cp -r /usr/src/app/packages/ /packages
