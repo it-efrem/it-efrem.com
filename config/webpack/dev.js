@@ -10,14 +10,14 @@ module.exports = (DIR_SRC, DIR_BUILD) => ({
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: `${DIR_SRC}/public/index.html`,
-            // favicon: `${DIR_SRC}/public/favicon.ico`,
+            template: `../../config/document/index.html`,
+            favicon: `../../config/document/favicon.ico`,
         }),
-        new CopyPlugin({
-            patterns: [
-                {from: `${DIR_SRC}/public`, to: `${DIR_BUILD}/public`}
-            ]
-        }),
+        // new CopyPlugin({
+        //     patterns: [
+        //         {from: `${DIR_SRC}/public`, to: `${DIR_BUILD}/public`}
+        //     ]
+        // }),
     ],
     module: {
         rules: [

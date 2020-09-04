@@ -9,12 +9,14 @@ services:
     build:
       context: ./
       dockerfile: ./packages/web/Dockerfile
-#    depends_on:
-#      - api
+    #    depends_on:
+    #      - api
     expose:
       - "${WEB_PORT}"
     ports:
       - "${WEB_PORT}:${WEB_PORT}"
+    volumes:
+      - packages:/usr/src/app/packages/
 
   # storybook:
   #   build: packages/storybook
@@ -31,3 +33,5 @@ services:
       - "${NGINX_PORT}:${NGINX_PORT}"
     depends_on:
       - web
+    volumes:
+      - packages:~/packages

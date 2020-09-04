@@ -3,34 +3,27 @@ const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 
-const DIR_PUBLIC = '/';
-const DIR_SRC = `${__dirname}/src`;
-const DIR_BUILD = `${__dirname}/build`;
-
-// ToDo: Need review it config
-
-module.exports = {
+module.exports = (DIR_SRC, DIR_BUILD) => ({
     mode: 'production',
     devtool: false,
     output: {
         path: DIR_BUILD,
-        publicPath: DIR_PUBLIC,
+        publicPath: '/',
         filename: '[name].[hash].js',
-        library: '[name]',
     },
     resolve: {
         extensions: ['.json', '.js', '.jsx', '.scss', '.css']
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: `${DIR_SRC}/public/index.html`,
-            favicon: `${DIR_SRC}/public/favicon.ico`,
+            template: `../../config/document/index.html`,
+            favicon: `../../config/document/favicon.ico`,
         }),
-        new CopyPlugin({
-            patterns: [
-                {from: `${DIR_SRC}/public`, to: `${DIR_BUILD}/public`}
-            ]
-        }),
+        // new CopyPlugin({
+        //     patterns: [
+        //         {from: `${DIR_SRC}/public`, to: `${DIR_BUILD}/public`}
+        //     ]
+        // }),
     ],
     module: {
         rules: [
@@ -113,4 +106,4 @@ module.exports = {
             }
         ]
     }
-};
+});

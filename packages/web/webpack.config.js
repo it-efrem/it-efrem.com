@@ -19,6 +19,6 @@ if (MODE === 'development') {
 
 if (MODE === 'production') {
     module.exports = {
-        ...prodConfig,
+        ...prodConfig(DIR_SRC, DIR_BUILD),
     };
 }
