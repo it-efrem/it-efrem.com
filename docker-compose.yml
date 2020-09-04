@@ -2,8 +2,16 @@
 
 version: '3.5'
 services:
-# api:
-#   build: packages/api
+  nginx:
+    build:
+      context: ./
+      dockerfile: ./config/nginx/Dockerfile
+    expose:
+      - "80"
+    ports:
+      - "80:80"
+  # api:
+  #   build: packages/api
   site:
     build:
       context: ./

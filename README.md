@@ -8,7 +8,7 @@
 
 
 ![Deploy result](https://github.com/it-efrem/it-efrem.com/workflows/Deploy/badge.svg)
-ToDo: Linter Status
-ToDo: NPM Status
+ToDo: Linter status
+ToDo: Tests status
 
 ## ToDo: Links to StoryBook
