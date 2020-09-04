@@ -1,22 +1,26 @@
 version: '3.5'
 services:
+
   # api:
   #   build: packages/api
   #   depends_on:
+
   web:
     build:
       context: ./
       dockerfile: ./packages/web/Dockerfile
-    depends_on:
-    #      - api
+#    depends_on:
+#      - api
     expose:
       - "${WEB_PORT}"
     ports:
       - "${WEB_PORT}:${WEB_PORT}"
+      -
   # storybook:
   #   build: packages/storybook
   #   depends_on:
   #     - api
+
   nginx:
     build:
       context: ./
