@@ -10,8 +10,8 @@ COPY ./ ./
 WORKDIR /usr/src/app/packages/site/
 
 # ToDo: using --force is correctly?
-#RUN npm i -g yarn --force && yarn install
-RUN npm i -g yarn && yarn install
+RUN npm i -g yarn --force && \
+    yarn install
 
 # ToDo: docker self restart?
 CMD npm run start:dev
