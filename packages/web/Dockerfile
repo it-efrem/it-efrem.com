@@ -7,12 +7,12 @@ COPY packages/web packages/web/
 # ToDo: How copy only files?
 COPY ./ ./
 
-WORKDIR /app/packages/web/
+#WORKDIR /app/packages/web/
+WORKDIR /app/packages/web/build
 
 # ToDo: using --force is correctly?
 #RUN npm i -g yarn --force && \
 #    yarn && \
 #    npm run build
 
-RUN mkdir build && \
-    echo "test" >> index.html
+RUN echo "test" >> index.html

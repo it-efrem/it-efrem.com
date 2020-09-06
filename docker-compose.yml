@@ -1,7 +1,7 @@
 version: '3.5'
 
 volumes:
-  web:
+  web_build:
 
 services:
 
@@ -20,7 +20,7 @@ services:
     ports:
       - "${WEB_PORT}:${WEB_PORT}"
     volumes:
-      - web:/app/packages/web:rw
+      - web_build:/app/packages/web/build:rw
 
   # storybook:
   #   build: packages/storybook
@@ -38,4 +38,4 @@ services:
     depends_on:
       - web
     volumes:
-      - web:/app/packages/web:ro
+      - web_build:/app/packages/web_build:ro
