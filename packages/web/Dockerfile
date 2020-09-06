@@ -11,5 +11,6 @@ WORKDIR /app/packages/web/
 
 # ToDo: using --force is correctly?
 RUN npm i -g yarn --force && \
-    yarn && \
-    npm run build
+    yarn
+
+CMD npm run build

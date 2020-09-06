@@ -13,7 +13,6 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-// ToDo: run production build in containers
 // ToDo: add git tag after master push
 // ToDo: how right run rebuild in error case?
 
