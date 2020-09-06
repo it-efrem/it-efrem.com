@@ -16,7 +16,7 @@ services:
     ports:
       - "${WEB_PORT}:${WEB_PORT}"
     volumes:
-      - ./docker_shared:/usr/docker_shared
+      - ./docker_shared:/usr/docker_shared/packages
 
   # storybook:
   #   build: packages/storybook
