@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: "Run ssh commands"
+      - name: "Build and Up"
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -20,7 +20,5 @@ jobs:
             git reset --hard HEAD
             git checkout master
             git pull
-            docker-compose down
-            docker rm -f $(docker ps -a -q)
-            docker volume rm $(docker volume ls -q)
-            docker-compose up --build --force-recreate --no-deps -d -V --remove-orphans
+            docker-compose down -v --remove-orphans --rmi local
+            docker-compose up --build --force-recreate --no-deps -d

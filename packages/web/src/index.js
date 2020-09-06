@@ -7,13 +7,8 @@ ReactDOM.render(
             Site is being developed
         </p>
         <p>
-            Write to telegram: it_efrem
+            Write to telegram: @it_efrem
         </p>
     </React.StrictMode>,
     document.getElementById('root')
 );
-
-// ToDo: add git tag after master push
-// ToDo: how right run rebuild in error case?
-
-// ToDo: Server protected review
