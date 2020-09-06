@@ -20,7 +20,9 @@ services:
     ports:
       - "${WEB_PORT}:${WEB_PORT}"
     volumes:
-      - web_build:/app/packages/web/build:rw
+      - type: tmpfs
+        source: web_build
+        target: /app/packages/web/build:rw
 
   # storybook:
   #   build: packages/storybook
