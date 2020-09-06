@@ -20,4 +20,4 @@ jobs:
             git reset --hard HEAD
             git checkout master
             git pull
-            docker-compose up --build --force-recreate --no-deps -d
+            docker-compose up --build --force-recreate --no-deps -d -V --remove-orphans
