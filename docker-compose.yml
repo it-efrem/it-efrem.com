@@ -1,4 +1,8 @@
 version: '3.5'
+
+volumes:
+  web:
+
 services:
 
   # api:
@@ -16,7 +20,7 @@ services:
     ports:
       - "${WEB_PORT}:${WEB_PORT}"
     volumes:
-      - ./docker_shared:/usr/docker_shared
+      - web:/app/packages/web:rw
 
   # storybook:
   #   build: packages/storybook
@@ -34,4 +38,4 @@ services:
     depends_on:
       - web
     volumes:
-      - ./docker_shared:/docker_shared
+      - web:/app/packages/web:ro
