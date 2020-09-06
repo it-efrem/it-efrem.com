@@ -10,7 +10,7 @@ ReactDOM.render(
             Write to telegram: it_efrem
         </p>
         <p>
-            Try 1
+            Try 2
         </p>
     </React.StrictMode>,
     document.getElementById('root')
