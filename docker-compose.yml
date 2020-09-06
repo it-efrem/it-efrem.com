@@ -20,9 +20,7 @@ services:
     ports:
       - "${WEB_PORT}:${WEB_PORT}"
     volumes:
-      - type: bind
-        source: web_build
-        target: /app/packages/web/build:rw
+      - web_build:/app/packages/web/build:rw
 
   # storybook:
   #   build: packages/storybook

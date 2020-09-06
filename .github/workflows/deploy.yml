@@ -20,4 +20,7 @@ jobs:
             git reset --hard HEAD
             git checkout master
             git pull
+            docker-compose down
+            docker rm -f $(docker ps -a -q)
+            docker volume rm $(docker volume ls -q)
             docker-compose up --build --force-recreate --no-deps -d -V --remove-orphans
