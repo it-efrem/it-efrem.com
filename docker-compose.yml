@@ -20,7 +20,7 @@ services:
     ports:
       - "${WEB_PORT}:${WEB_PORT}"
     volumes:
-      - type: tmpfs
+      - type: bind
         source: web_build
         target: /app/packages/web/build:rw
 
