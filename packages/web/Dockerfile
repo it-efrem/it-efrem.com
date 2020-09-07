@@ -10,7 +10,7 @@ COPY ./ ./
 WORKDIR /app/packages/web/
 
 # ToDo: using --force is correctly?
-RUN npm i -g yarn --force && \
-    yarn
+RUN npm i -g yarn --force
+RUN yarn
 
 CMD npm run build
