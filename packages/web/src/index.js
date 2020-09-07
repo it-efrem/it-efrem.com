@@ -7,7 +7,8 @@ ReactDOM.render(
             Site is being developed...
         </p>
         <p>
-            Write to telegram: @it_efrem
+            Write to telegram:
+            <a href="https://t.me/it_efrem" target="_blank">@it_efrem</a>
         </p>
     </React.StrictMode>,
     document.getElementById('root')
