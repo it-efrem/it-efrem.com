@@ -14,7 +14,3 @@ RUN npm i -g yarn --force && \
     yarn
 
 RUN npm run build
-
-WORKDIR /app/packages/web/build
-
-CMD ls -a
