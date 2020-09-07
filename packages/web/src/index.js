@@ -9,6 +9,7 @@ ReactDOM.render(
         <p>
             Write to telegram: @it_efrem
         </p>
+        <!--Try 0-->
     </React.StrictMode>,
     document.getElementById('root')
 );
