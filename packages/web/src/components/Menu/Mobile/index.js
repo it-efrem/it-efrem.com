@@ -5,6 +5,7 @@ import {Icon} from "../../Icon";
 import * as Color from "../../../styles/Colors.module.scss";
 import * as Size from "../../../styles/sizes.module.scss";
 import {Button} from "../../Button";
+import cx from "classnames";
 
 import bars_solid from "../../Icon/icons/bars-solid.svg";
 import times_solid from "../../Icon/icons/times-solid.svg";
@@ -13,7 +14,7 @@ import email from "../../Icon/icons/at-solid.svg";
 import pdf from "../../Icon/icons/file-pdf-regular.svg";
 
 export const MenuMobile = () => {
-    const [ref, isOpen, changeVisible] = useEventOutside(false);
+    const [container_ref, isOpen, changeVisible] = useEventOutside(false);
 
     const changeMenuVisible = () => {
         const newValue = !isOpen
@@ -38,9 +39,9 @@ export const MenuMobile = () => {
         <div className={Style.menu}>
             {
                 isOpen &&
-                <div className={Style.menuFloat}
-                     ref={ref}>
-                    <div className={Style.buttons}>
+                <div className={Style.menuFloat}>
+                    <div className={Style.buttons}
+                         ref={container_ref}>
                         <Button className={Size.small}>
                             <Icon text={"EN"}
                                   className={Color.secondary}/>
@@ -67,7 +68,7 @@ export const MenuMobile = () => {
             }
 
             <Button onClick={changeMenuVisible}
-                    className={Size.normal}>
+                    className={cx(Size.normal, Style.menuMainButton)}>
                 {
                     isOpen && <Icon svg={times_solid}
                                     className={Color.secondary_bg}/>

@@ -1,0 +1,11 @@
+.aboutMe {
+  font-size: 30px;
+  line-height: 1.35em;
+  font-family: "Inter-Bold";
+
+  p {
+    & + p {
+      margin-top: 1em;
+    }
+  }
+}

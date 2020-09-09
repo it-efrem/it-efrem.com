@@ -15,19 +15,28 @@
 }
 
 .menuFloat {
-  display: flex;
-  align-items: flex-end;
-  z-index: 1;
+  z-index: 10;
   position: fixed;
   right: 0;
   bottom: 0;
-  margin: 0.5em;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  background: #00000080;
+
   transition: 200ms;
 }
 
+.menuMainButton {
+  z-index: 11;
+}
+
 .buttons {
-  margin-bottom: 4em;
-  width: 4.4em;
+  z-index: 11;
+  position: absolute;
+  bottom: 5em;
+  right: 1.475em;
   display: flex;
   flex-direction: column;
   justify-content: center;
