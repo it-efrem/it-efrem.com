@@ -63,7 +63,6 @@ module.exports = (DIR_SRC, DIR_BUILD) => ({
                             modules: {
                                 localIdentName: "[name]_[local]_[hash:base64]",
                             },
-                            localsConvention: 'camelCaseOnly',
                             sourceMap: true
                         }
                     },
