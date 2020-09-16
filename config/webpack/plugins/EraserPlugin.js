@@ -16,7 +16,8 @@ class EraserPlugin {
     options = {};
 
     constructor(options = {}) {
-        if (validateOptions(schema, options, 'EraserPlugin')) {
+        // ToDo: validate don't work for linux. Why?
+        // if (validateOptions(schema, options, 'EraserPlugin')) {
             if (os.platform() === 'win32') {
                 this.options = {
                     ...this.options,
@@ -27,7 +28,7 @@ class EraserPlugin {
             }
 
             this.absolutePath = process.cwd() + this.options.relativePath;
-        }
+        // }
     }
 
     apply(compiler) {

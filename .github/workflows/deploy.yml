@@ -17,5 +17,4 @@ jobs:
           KEY: ${{ secrets.SSHKEY }}
           script: |
             cd ${{ secrets.WORKDIR }}
-            cd /config/ci
             sh ./config/ci/deploy.sh

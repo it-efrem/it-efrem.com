@@ -13,4 +13,4 @@ WORKDIR /app/packages/web/
 RUN npm i -g yarn --force && \
     yarn
 
-RUN npm run build
+RUN yarn build
