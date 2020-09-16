@@ -22,6 +22,11 @@
         window.location.replace('/update-your-browser')
     }
 </script>
+<script>
+    window.onerror = function () {
+        window.location.push('/')
+    }
+</script>
 
 <div id="root">
     <!-- ToDo: Loader / Spinner -->
