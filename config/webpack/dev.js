@@ -13,11 +13,11 @@ module.exports = (DIR_SRC, DIR_BUILD) => ({
             template: `../../config/document/index.html`,
             favicon: `../../config/document/favicon.ico`,
         }),
-        // new CopyPlugin({
-        //     patterns: [
-        //         {from: `${DIR_SRC}/public`, to: `${DIR_BUILD}/public`}
-        //     ]
-        // }),
+        new CopyPlugin({
+            patterns: [
+                {from: `../../config/document/pages`, to: `${process.cwd() + DIR_BUILD}/pages`}
+            ]
+        }),
     ],
     module: {
         rules: [

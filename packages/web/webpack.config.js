@@ -1,8 +1,8 @@
 const devConfig = require('../../config/webpack/dev');
 const prodConfig = require('../../config/webpack/prod');
 
-const DIR_SRC = `${__dirname}/src`;
-const DIR_BUILD = `${__dirname}/build`;
+const DIR_SRC = `/src`;
+const DIR_BUILD = `/build`;
 const {MODE} = process.env;
 
 if (MODE === 'development') {
@@ -12,7 +12,7 @@ if (MODE === 'development') {
             host: '0.0.0.0',
             port: 3000,
             historyApiFallback: true,
-            disableHostCheck: true, // remove it after move to start:prod in Dockerfile
+            // disableHostCheck: true,
         },
     };
 }

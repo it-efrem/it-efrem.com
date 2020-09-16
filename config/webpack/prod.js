@@ -2,12 +2,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
+const EraserPlugin = require('./plugins/EraserPlugin');
 
 module.exports = (DIR_SRC, DIR_BUILD) => ({
     mode: 'production',
     devtool: false,
     output: {
-        path: DIR_BUILD,
+        path: process.cwd() + DIR_BUILD,
         publicPath: '/',
         filename: '[name].[hash].js',
     },
@@ -15,15 +16,19 @@ module.exports = (DIR_SRC, DIR_BUILD) => ({
         extensions: ['.json', '.js', '.jsx', '.scss', '.css']
     },
     plugins: [
+        new EraserPlugin({
+            relativePath: DIR_BUILD
+        }),
         new HtmlWebpackPlugin({
             template: `../../config/document/index.html`,
             favicon: `../../config/document/favicon.ico`,
         }),
-        // new CopyPlugin({
-        //     patterns: [
-        //         {from: `${DIR_SRC}/public`, to: `${DIR_BUILD}/public`}
-        //     ]
-        // }),
+        new CopyPlugin({
+            patterns: [
+                {from: `../../config/document/pages`, to: `${process.cwd() + DIR_BUILD}/pages`}
+            ]
+        }),
+        new MiniCssExtractPlugin(),
     ],
     module: {
         rules: [
