@@ -17,4 +17,6 @@ jobs:
           KEY: ${{ secrets.SSHKEY }}
           script: |
             cd ${{ secrets.WORKDIR }}
+            git reset --hard HEAD
+            git pull
             sh ./config/ci/deploy.sh
