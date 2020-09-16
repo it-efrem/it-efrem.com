@@ -18,4 +18,4 @@ jobs:
           script: |
             cd ${{ secrets.WORKDIR }}
             cd /config/ci
-            sh ./deploy.sh
+            sh ./config/ci/deploy.sh
