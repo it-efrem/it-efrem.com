@@ -13,6 +13,8 @@ const schema = {
 
 // ToDo: accept array paths
 class EraserPlugin {
+    options = {};
+
     constructor(options = {}) {
         if (validateOptions(schema, options, 'EraserPlugin')) {
             if (os.platform() === 'win32') {
