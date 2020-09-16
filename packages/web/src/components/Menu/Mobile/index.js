@@ -2,7 +2,7 @@ import React from "react";
 import * as Style from "./style.module.scss";
 import {useEventOutside} from "./useOutsideEvent";
 import {Icon} from "../../Icon";
-import * as Color from "../../../styles/Colors.module.scss";
+import * as Color from "../../../styles/colors.module.scss";
 import * as Size from "../../../styles/sizes.module.scss";
 import {Button} from "../../Button";
 import cx from "classnames";

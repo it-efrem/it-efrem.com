@@ -17,8 +17,5 @@ jobs:
           KEY: ${{ secrets.SSHKEY }}
           script: |
             cd ${{ secrets.WORKDIR }}
-            git reset --hard HEAD
-            git checkout master
-            git pull
-            docker-compose down -v --remove-orphans --rmi local
-            docker-compose up --build --force-recreate --no-deps -d -V --remove-orphans
+            cd /config/ci
+            sh ./deploy.sh
