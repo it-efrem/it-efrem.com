@@ -6,7 +6,20 @@ import "./styles/fonts.scss";
 
 ReactDOM.render(
     <React.StrictMode>
-        <App/>
+        <p>
+            Site is being developed...
+        </p>
+        <p>
+            Write to telegram:
+            <a href="https://t.me/it_efrem" target="_blank">@it_efrem</a>
+        </p>
     </React.StrictMode>,
     document.getElementById('root')
 );
+
+// ReactDOM.render(
+//     <React.StrictMode>
+//         <App/>
+//     </React.StrictMode>,
+//     document.getElementById('root')
+// );
