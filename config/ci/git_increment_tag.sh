@@ -6,6 +6,8 @@ echo "git_increment_tag"
 #CURRENT_BRANCH=$(git branch --show-current)
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
+echo "$CURRENT_BRANCH: $CURRENT_BRANCH"
+
 if [[ "$CURRENT_BRANCH" == "master" ]]; then
   CURRENT_TAG=$(git describe --abbrev=0 --tags)
   VERSION_BITS="${CURRENT_TAG//./ }"
