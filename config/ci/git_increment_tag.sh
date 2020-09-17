@@ -5,10 +5,6 @@ echo "git_increment_tag"
 
 echo "$(git remote -v)"
 
-git remote set-url --push origin git@github.com:it-efrem/it-efrem.com.git
-
-echo "$(git remote -v)"
-
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 if [[ "$CURRENT_BRANCH" == "master" ]]; then

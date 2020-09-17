@@ -20,4 +20,4 @@ jobs:
             git reset --hard HEAD
             git pull
             bash ./config/ci/git_increment_tag.sh
-            sh ./config/ci/deploy.sh
+#            bash ./config/ci/deploy.sh
