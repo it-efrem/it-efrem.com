@@ -3,7 +3,8 @@ set -ex # e - exit on error, x - print command before execution
 
 echo "git_increment_tag"
 
-CURRENT_BRANCH=$(git branch --show-current)
+#CURRENT_BRANCH=$(git branch --show-current)
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 if [[ "$CURRENT_BRANCH" == "master" ]]; then
   CURRENT_TAG=$(git describe --abbrev=0 --tags)
