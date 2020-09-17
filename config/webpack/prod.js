@@ -19,14 +19,14 @@ module.exports = (DIR_SRC, DIR_BUILD) => ({
         new EraserPlugin({
             relativePath: DIR_BUILD
         }),
+        new CopyPlugin({
+            patterns: [
+                {from: `../../config/document`, to: `${process.cwd() + DIR_BUILD}`}
+            ]
+        }),
         new HtmlWebpackPlugin({
             template: `../../config/document/index.html`,
             favicon: `../../config/document/favicon.ico`,
-        }),
-        new CopyPlugin({
-            patterns: [
-                {from: `../../config/document/pages`, to: `${process.cwd() + DIR_BUILD}/pages`}
-            ]
         }),
         new MiniCssExtractPlugin(),
     ],

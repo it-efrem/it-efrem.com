@@ -9,14 +9,14 @@ module.exports = (DIR_SRC, DIR_BUILD) => ({
         extensions: ['.json', '.js', '.jsx', '.scss', '.css']
     },
     plugins: [
+        new CopyPlugin({
+            patterns: [
+                {from: `../../config/document`, to: `${process.cwd() + DIR_BUILD}`}
+            ]
+        }),
         new HtmlWebpackPlugin({
             template: `../../config/document/index.html`,
             favicon: `../../config/document/favicon.ico`,
-        }),
-        new CopyPlugin({
-            patterns: [
-                {from: `../../config/document/pages`, to: `${process.cwd() + DIR_BUILD}/pages`}
-            ]
         }),
     ],
     module: {
