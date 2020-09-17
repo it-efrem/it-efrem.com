@@ -3,6 +3,8 @@ set -ex # e - exit on error, x - print command before execution
 
 echo "git_increment_tag"
 
+echo "$(git remote -v)"
+
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 if [[ "$CURRENT_BRANCH" == "master" ]]; then
