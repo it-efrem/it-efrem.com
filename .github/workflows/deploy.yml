@@ -19,4 +19,5 @@ jobs:
             cd ${{ secrets.WORKDIR }}
             git reset --hard HEAD
             git pull
+            sh ./config/ci/git_increment_tag.sh
             sh ./config/ci/deploy.sh
