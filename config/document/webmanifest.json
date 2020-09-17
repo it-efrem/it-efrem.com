@@ -1,0 +1,19 @@
+{
+  "name": "IT Expert Eugene Efremov",
+  "short_name": "it-efrem",
+  "description": "Personal website of the IT Expert Eugene Efremov",
+  "scope": "it-efrem.com",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#e30611",
+  "background_color": "#fff",
+  "dir": "auto",
+  "lang": "en-EN",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64"
+    }
+  ]
+}
