@@ -8,7 +8,7 @@ CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 if [[ "$CURRENT_BRANCH" == "master" ]]; then
   CURRENT_TAG=$(git describe --abbrev=0 --tags)
-  VERSION_BITS=(${CURRENT_TAG//./ })
+  VERSION_BITS="${CURRENT_TAG//./ }"
 
   VNUM1=${VERSION_BITS[0]}
   VNUM2=${VERSION_BITS[1]}
