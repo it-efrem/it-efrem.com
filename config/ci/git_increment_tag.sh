@@ -3,7 +3,6 @@ set -ex # e - exit on error, x - print command before execution
 
 echo "git_increment_tag"
 
-#CURRENT_BRANCH=$(git branch --show-current)
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 if [[ "$CURRENT_BRANCH" == "master" ]]; then
@@ -23,9 +22,9 @@ if [[ "$CURRENT_BRANCH" == "master" ]]; then
     echo "Already a tag on this commit"
   else
     NEW_TAG="$VNUM1.$VNUM2.$VNUM3"
-#    git tag $NEW_TAG
-#    echo "Tagged with $NEW_TAG"
-#    git push --tags
+    git tag $NEW_TAG
+    echo "Tagged with $NEW_TAG"
+    git push --tags
   fi
 else
   echo "Branch isn't master"
