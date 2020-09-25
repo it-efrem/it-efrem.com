@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:12.18.4-stretch-slim
 
 WORKDIR /app/
 
@@ -9,8 +9,5 @@ COPY ./ ./
 
 WORKDIR /app/packages/web/
 
-# ToDo: using --force is correctly?
-RUN npm i -g yarn --force && \
-    yarn
-
-RUN yarn build
+RUN yarn \
+    yarn build
