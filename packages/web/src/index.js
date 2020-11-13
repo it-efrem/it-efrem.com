@@ -1,12 +1,14 @@
 import ReactDOM from "react-dom";
 import React from "react";
-import {App} from "./components/App";
 import "./styles/reset.css";
 import "./styles/fonts.scss";
+import {App} from "./components/App";
+import {Cursor} from "./components/Cursor";
 
 ReactDOM.render(
-    <React.StrictMode>
-        <App/>
-    </React.StrictMode>,
-    document.getElementById('root')
+  <React.StrictMode>
+    <App/>
+    <Cursor/>
+  </React.StrictMode>,
+  document.getElementById('root')
 );

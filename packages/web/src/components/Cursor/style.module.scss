@@ -1,0 +1,21 @@
+.cursor {
+  z-index: 100;
+  cursor: none;
+  position: absolute;
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition-property: background-color, width, height, margin;
+  transition-duration: 333ms;
+}
+
+.active {
+  margin: 34px;
+  width: 32px;
+  height: 32px;
+  background-color: #00f4fa !important;
+  transition-property: background-color, width, height, margin;
+  transition-duration: 333ms;
+}
