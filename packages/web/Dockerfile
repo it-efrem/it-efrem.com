@@ -1,4 +1,4 @@
-FROM node:12.18.4
+FROM node:12
 
 WORKDIR /app/
 
@@ -13,5 +13,4 @@ WORKDIR /app/packages/web/
 RUN npm i -g yarn --force && \
     yarn
 
-RUN yarn \
-    yarn build
+RUN yarn build
