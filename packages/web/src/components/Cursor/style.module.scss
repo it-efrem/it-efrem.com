@@ -3,8 +3,8 @@
   cursor: none;
   position: absolute;
   margin: 0;
-  width: 100px;
-  height: 100px;
+  width: 78px;
+  height: 78px;
   mix-blend-mode: difference;
   pointer-events: none;
   transition-property: background-color, width, height, margin;
@@ -12,10 +12,15 @@
 }
 
 .active {
-  margin: 34px;
-  width: 32px;
-  height: 32px;
+  margin: 26px;
+  width: 26px;
+  height: 26px;
   background-color: #00f4fa !important;
   transition-property: background-color, width, height, margin;
   transition-duration: 333ms;
+}
+
+.triangle {
+  background: url("../../files/img/triangle.gif");
+  background-size: 140%;
 }
