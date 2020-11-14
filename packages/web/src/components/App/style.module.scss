@@ -6,6 +6,10 @@
   background: #000;
   cursor: none;
   user-select: none;
+
+  @media screen and (max-width: 550px) {
+    cursor: default !important;
+  }
 }
 
 .wrapper {
@@ -21,14 +25,39 @@
     font-size: 1.6em;
     font-weight: bold;
     margin-bottom: 1em;
+
+    @media screen and (max-width: 550px) {
+      font-size: 1.3em;
+    }
+  }
+}
+
+.isMobile {
+  display: none;
+
+  @media screen and (max-width: 550px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: white;
+    text-align: center;
+    padding: 2em 0;
+    font-weight: bold;
   }
 }
 
 .list {
   margin: 1.7em 0;
 
-  li + li {
-    margin-top: 0.8em;
+  li {
+    + li {
+      margin-top: 0.8em;
+    }
+
+    @media screen and (max-width: 550px) {
+      font-size: 0.8em;
+    }
   }
 }
 
