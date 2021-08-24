@@ -1,3 +1,7 @@
-module.exports = function override(config, env) {
-  return config;
-};
+const {override, addBabelPlugin} = require('customize-cra');
+
+module.exports = override(
+  addBabelPlugin([
+    'styled-components',
+  ])
+);

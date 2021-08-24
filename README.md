@@ -1,1 +1,1 @@
-![Deploy result](https://github.com/it-efrem/it-efrem.com/workflows/Deploy/badge.svg)
+[![Deploy](https://github.com/it-efrem/it-efrem.com/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/it-efrem/it-efrem.com/actions/workflows/deploy.yml)
