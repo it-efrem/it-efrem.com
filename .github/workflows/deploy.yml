@@ -17,5 +17,6 @@ jobs:
           KEY: ${{ secrets.SSHKEY }}
           script: |
             cd ${{ secrets.WORKDIR }}
-            bash ./config/ci/deploy.sh
-            bash ./config/ci/git_increment_tag.sh
+            bash ./config/ci/git-update.sh
+            bash ./config/ci/git-tag.sh
+            bash ./config/ci/deploy.prod.sh
