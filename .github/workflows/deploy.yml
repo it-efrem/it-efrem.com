@@ -17,7 +17,5 @@ jobs:
           KEY: ${{ secrets.SSHKEY }}
           script: |
             cd ${{ secrets.WORKDIR }}
-            git reset --hard HEAD
-            git pull
-            bash ./config/ci/git_increment_tag.sh
             bash ./config/ci/deploy.sh
+            bash ./config/ci/git_increment_tag.sh

@@ -1,1 +1,0 @@
-ToDo: NPM Status badge

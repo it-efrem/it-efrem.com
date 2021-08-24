@@ -1,5 +1,9 @@
 #!/bin/bash
 set -ex # e - exit on error, x - print command before execution
 
-docker-compose down -v --remove-orphans --rmi local
-docker-compose up --build --force-recreate --no-deps -d -V --remove-orphans
+git fetch --all
+git reset --hard HEAD
+git pull
+
+npm ci
+npm run build
