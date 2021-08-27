@@ -9,8 +9,8 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://it-efrem.com/update-your-browser</loc>
-        <changefreq>never</changefreq>
-        <priority>0.1</priority>
+        <loc>https://universe-sandbox.it-efrem.com</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
     </url>
 </urlset>
