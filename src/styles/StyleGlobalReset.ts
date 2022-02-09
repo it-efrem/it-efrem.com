@@ -1,8 +1,9 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const StyleGlobalReset = createGlobalStyle`
     body {
         margin: 0;
-        font-family: "Inter-Regular", sans-serif;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        font-weight: 400;
     }
 `;

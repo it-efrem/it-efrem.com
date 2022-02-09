@@ -1,72 +1,52 @@
 import React from "react";
-import {StyledContacts, StyledContainer, StyledList, StyledMark, StyledProjectLink, StyledWrapper} from "./App.styles";
 
-const YearIcon: React.FC = () => {
-    const year = (new Date).getFullYear() - 2014;
-    const iconMap: { [k: number]: string } = {
-        7: '7️⃣',
-        8: '8️⃣',
-        9: '9️⃣',
-    };
+import { Avatar } from "src/components/Avatar/Avatar";
+import { Contacts } from "src/components/Contacts/Contacts";
+import { OpenSource } from "src/components/OpenSource/OpenSource";
+import { Projects } from "src/components/Projects/Projects";
+import { Skills } from "src/components/Skills/Skills";
 
-    return <>{iconMap[year] ?? year}</>;
-}
+import { StyledAppWrapper, StyledGeneralInfo } from "./App.styles";
+import {
+  StyledInfoBlock,
+  StyledInfoBlockTitle,
+  StyledInfoBlocksWrapper,
+} from "src/components/InfoBlock/InfoBlock.styles";
+import { StyledMark } from "src/components/Mark/Mark.styled";
+import { StyledSubTitle } from "src/components/SubTitle/SubTitle.styles";
+import { StyledTitle } from "src/components/Title/Title.styles";
 
-export const App: React.FC = () => {
-    return (
-        <StyledContainer>
-            <StyledWrapper>
-                <h1>Eugene Efremov</h1>
+export const App: React.FC = () => (
+  <StyledAppWrapper>
+    <Avatar />
 
-                <StyledList>
-                    <li>
-                        <StyledMark>🔥</StyledMark>
-                        <span>Senior Full Stack Developer</span>
-                    </li>
-                    <li>
-                        <StyledMark>🔮</StyledMark>
-                        <span>WebGL, Canvas</span>
-                    </li>
-                    <li>
-                        <StyledMark>⚛️</StyledMark>
-                        <span>ReactJS</span>
-                    </li>
-                    <li>
-                        <StyledMark>🔨</StyledMark>
-                        <span>NodeJS</span>
-                    </li>
-                    <li>
-                        <StyledMark><YearIcon/></StyledMark>
-                        <span>years of experience</span>
-                    </li>
-                </StyledList>
+    <StyledGeneralInfo>
+      <StyledTitle>Eugene Efremov</StyledTitle>
 
-                <StyledContacts>
-                    <li>
-                        <a data-cursor-reaction="true"
-                           href='https://t.me/it_efrem'
-                           target='_blank'>Telegram</a>
-                    </li>
-                    <li>
-                        <a data-cursor-reaction="true"
-                           href='https://github.com/it-efrem'
-                           target='_blank'>GitHub</a>
-                    </li>
-                </StyledContacts>
-            </StyledWrapper>
-            <StyledWrapper>
-                <h1>Open Source</h1>
+      <StyledSubTitle>
+        <span>JavaScript Full-Stack</span>
+        <StyledMark>🔥</StyledMark>
+        <span>Senior Developer</span>
+      </StyledSubTitle>
 
-                <StyledList>
-                    <li>
-                        <StyledProjectLink href="https://universe-sandbox.it-efrem.com" target="_blank" rel="
-noreferrer">
-                            <StyledMark>🪐</StyledMark>
-                            <span>Universe Sandbox 2D Web</span>
-                        </StyledProjectLink>
-                    </li>
-                </StyledList>
-            </StyledWrapper>
-        </StyledContainer>
-    )
-};
+      <Contacts />
+    </StyledGeneralInfo>
+
+    <StyledInfoBlocksWrapper>
+      <StyledInfoBlock>
+        <StyledInfoBlockTitle>Skills</StyledInfoBlockTitle>
+        <Skills />
+      </StyledInfoBlock>
+
+      <StyledInfoBlock>
+        <StyledInfoBlockTitle>Projects</StyledInfoBlockTitle>
+        <Projects />
+      </StyledInfoBlock>
+
+      <StyledInfoBlock>
+        <StyledInfoBlockTitle>Open Source</StyledInfoBlockTitle>
+        <OpenSource />
+      </StyledInfoBlock>
+    </StyledInfoBlocksWrapper>
+  </StyledAppWrapper>
+);
