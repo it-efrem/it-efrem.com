@@ -1,0 +1,19 @@
+{
+  "name": "Eugene Efremov - JavaScript Full-Stack Senior Developer",
+  "short_name": "it-efrem",
+  "description": "Eugene Efremov personal website, JavaScript Full-Stack Senior Developer",
+  "scope": "it-efrem.com",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#e30611",
+  "background_color": "#fff",
+  "dir": "auto",
+  "lang": "en-EN",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64"
+    }
+  ]
+}
