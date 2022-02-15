@@ -48,7 +48,7 @@ export function Skills() {
         <StyledMarkDescription>
           <li>
             React.JS <br />
-            Graphics (WebGL, Canvas) <br />
+            Graphics (Three.js, WebGL, Canvas) <br />
             Testing (Jest, Cypress) <br />
             Webpack, etc.
           </li>

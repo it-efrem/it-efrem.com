@@ -22,7 +22,7 @@ noreferrer"
           <span>Universe Sandbox Web</span>
         </StyledLink>
         <StyledMarkDescription>
-          <li>Interactive space sandbox gravity simulator</li>
+          <li>3D Interactive space sandbox gravity simulator</li>
         </StyledMarkDescription>
       </li>
       <li>
